@@ -1,0 +1,2140 @@
+[ 2025-04-05 11:07 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 11:07 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 11:07 ] Data load finished
+[ 2025-04-05 11:07 ] Optimizer load finished: AdamW
+[ 2025-04-05 11:07 ] base_lr: 0.001
+[ 2025-04-05 11:07 ] batch_size: 1
+[ 2025-04-05 11:07 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 11:07 ] cuda_visible_device: 0
+[ 2025-04-05 11:07 ] device: [0]
+[ 2025-04-05 11:07 ] eval_interval: 2
+[ 2025-04-05 11:07 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 11:07 ] ignore_weights: []
+[ 2025-04-05 11:07 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 11:07 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 11:07 ] lr_decay_rate: 0.2
+[ 2025-04-05 11:07 ] model: model.ISTANet.Model
+[ 2025-04-05 11:07 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 11:07 ] nesterov: True
+[ 2025-04-05 11:07 ] num_epoch: 150
+[ 2025-04-05 11:07 ] num_worker: 8
+[ 2025-04-05 11:07 ] optimizer: AdamW
+[ 2025-04-05 11:07 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 11:07 ] print_log: True
+[ 2025-04-05 11:07 ] run_mode: train
+[ 2025-04-05 11:07 ] save_epoch: 80
+[ 2025-04-05 11:07 ] save_score: False
+[ 2025-04-05 11:07 ] seed: 1
+[ 2025-04-05 11:07 ] show_topk: [1, 5]
+[ 2025-04-05 11:07 ] start_epoch: 0
+[ 2025-04-05 11:07 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 11:07 ] test_batch_size: 1
+[ 2025-04-05 11:07 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 11:07 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 11:07 ] warm_up_epoch: 5
+[ 2025-04-05 11:07 ] weight_decay: 0.0004
+[ 2025-04-05 11:07 ] weights: None
+[ 2025-04-05 11:07 ] work_dir: ./exp/h2o
+[ 2025-04-05 11:07 ] # Parameters: 32218391
+[ 2025-04-05 11:07 ] ###***************start training***************###
+[ 2025-04-05 11:07 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 11:09 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 11:09 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 11:09 ] Data load finished
+[ 2025-04-05 11:09 ] Optimizer load finished: AdamW
+[ 2025-04-05 11:09 ] base_lr: 0.001
+[ 2025-04-05 11:09 ] batch_size: 1
+[ 2025-04-05 11:09 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 11:09 ] cuda_visible_device: 0
+[ 2025-04-05 11:09 ] device: [0]
+[ 2025-04-05 11:09 ] eval_interval: 2
+[ 2025-04-05 11:09 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 11:09 ] ignore_weights: []
+[ 2025-04-05 11:09 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 11:09 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 11:09 ] lr_decay_rate: 0.2
+[ 2025-04-05 11:09 ] model: model.ISTANet.Model
+[ 2025-04-05 11:09 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 11:09 ] nesterov: True
+[ 2025-04-05 11:09 ] num_epoch: 150
+[ 2025-04-05 11:09 ] num_worker: 8
+[ 2025-04-05 11:09 ] optimizer: AdamW
+[ 2025-04-05 11:09 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 11:09 ] print_log: True
+[ 2025-04-05 11:09 ] run_mode: train
+[ 2025-04-05 11:09 ] save_epoch: 80
+[ 2025-04-05 11:09 ] save_score: False
+[ 2025-04-05 11:09 ] seed: 1
+[ 2025-04-05 11:09 ] show_topk: [1, 5]
+[ 2025-04-05 11:09 ] start_epoch: 0
+[ 2025-04-05 11:09 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 11:09 ] test_batch_size: 1
+[ 2025-04-05 11:09 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 11:09 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 11:09 ] warm_up_epoch: 5
+[ 2025-04-05 11:09 ] weight_decay: 0.0004
+[ 2025-04-05 11:09 ] weights: None
+[ 2025-04-05 11:09 ] work_dir: ./exp/h2o
+[ 2025-04-05 11:09 ] # Parameters: 32218391
+[ 2025-04-05 11:09 ] ###***************start training***************###
+[ 2025-04-05 11:09 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 12:38 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 12:38 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 12:38 ] Data load finished
+[ 2025-04-05 12:38 ] Optimizer load finished: AdamW
+[ 2025-04-05 12:38 ] base_lr: 0.001
+[ 2025-04-05 12:38 ] batch_size: 1
+[ 2025-04-05 12:38 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 12:38 ] cuda_visible_device: 0
+[ 2025-04-05 12:38 ] device: [0]
+[ 2025-04-05 12:38 ] eval_interval: 2
+[ 2025-04-05 12:38 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 12:38 ] ignore_weights: []
+[ 2025-04-05 12:38 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 12:38 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 12:38 ] lr_decay_rate: 0.2
+[ 2025-04-05 12:38 ] model: model.ISTANet.Model
+[ 2025-04-05 12:38 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 12:38 ] nesterov: True
+[ 2025-04-05 12:38 ] num_epoch: 150
+[ 2025-04-05 12:38 ] num_worker: 8
+[ 2025-04-05 12:38 ] optimizer: AdamW
+[ 2025-04-05 12:38 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 12:38 ] print_log: True
+[ 2025-04-05 12:38 ] run_mode: train
+[ 2025-04-05 12:38 ] save_epoch: 80
+[ 2025-04-05 12:38 ] save_score: False
+[ 2025-04-05 12:38 ] seed: 1
+[ 2025-04-05 12:38 ] show_topk: [1, 5]
+[ 2025-04-05 12:38 ] start_epoch: 0
+[ 2025-04-05 12:38 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 12:38 ] test_batch_size: 1
+[ 2025-04-05 12:38 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 12:38 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 12:38 ] warm_up_epoch: 5
+[ 2025-04-05 12:38 ] weight_decay: 0.0004
+[ 2025-04-05 12:38 ] weights: None
+[ 2025-04-05 12:38 ] work_dir: ./exp/h2o
+[ 2025-04-05 12:38 ] # Parameters: 32218391
+[ 2025-04-05 12:38 ] ###***************start training***************###
+[ 2025-04-05 12:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 14:43 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 14:43 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 14:43 ] Data load finished
+[ 2025-04-05 14:43 ] Optimizer load finished: AdamW
+[ 2025-04-05 14:43 ] base_lr: 0.001
+[ 2025-04-05 14:43 ] batch_size: 1
+[ 2025-04-05 14:43 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 14:43 ] cuda_visible_device: 0
+[ 2025-04-05 14:43 ] device: [0]
+[ 2025-04-05 14:43 ] eval_interval: 2
+[ 2025-04-05 14:43 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 14:43 ] ignore_weights: []
+[ 2025-04-05 14:43 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 14:43 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 14:43 ] lr_decay_rate: 0.2
+[ 2025-04-05 14:43 ] model: model.ISTANet.Model
+[ 2025-04-05 14:43 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 14:43 ] nesterov: True
+[ 2025-04-05 14:43 ] num_epoch: 150
+[ 2025-04-05 14:43 ] num_worker: 8
+[ 2025-04-05 14:43 ] optimizer: AdamW
+[ 2025-04-05 14:43 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 14:43 ] print_log: True
+[ 2025-04-05 14:43 ] run_mode: train
+[ 2025-04-05 14:43 ] save_epoch: 80
+[ 2025-04-05 14:43 ] save_score: False
+[ 2025-04-05 14:43 ] seed: 1
+[ 2025-04-05 14:43 ] show_topk: [1, 5]
+[ 2025-04-05 14:43 ] start_epoch: 0
+[ 2025-04-05 14:43 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 14:43 ] test_batch_size: 1
+[ 2025-04-05 14:43 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 14:43 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 14:43 ] warm_up_epoch: 5
+[ 2025-04-05 14:43 ] weight_decay: 0.0004
+[ 2025-04-05 14:43 ] weights: None
+[ 2025-04-05 14:43 ] work_dir: ./exp/h2o
+[ 2025-04-05 14:43 ] # Parameters: 32218391
+[ 2025-04-05 14:43 ] ###***************start training***************###
+[ 2025-04-05 14:43 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 14:47 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 14:47 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 14:47 ] Data load finished
+[ 2025-04-05 14:47 ] Optimizer load finished: AdamW
+[ 2025-04-05 14:47 ] base_lr: 0.001
+[ 2025-04-05 14:47 ] batch_size: 1
+[ 2025-04-05 14:47 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 14:47 ] cuda_visible_device: 0
+[ 2025-04-05 14:47 ] device: [0]
+[ 2025-04-05 14:47 ] eval_interval: 2
+[ 2025-04-05 14:47 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 14:47 ] ignore_weights: []
+[ 2025-04-05 14:47 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 14:47 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 14:47 ] lr_decay_rate: 0.2
+[ 2025-04-05 14:47 ] model: model.ISTANet.Model
+[ 2025-04-05 14:47 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 14:47 ] nesterov: True
+[ 2025-04-05 14:47 ] num_epoch: 150
+[ 2025-04-05 14:47 ] num_worker: 8
+[ 2025-04-05 14:47 ] optimizer: AdamW
+[ 2025-04-05 14:47 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 14:47 ] print_log: True
+[ 2025-04-05 14:47 ] run_mode: train
+[ 2025-04-05 14:47 ] save_epoch: 80
+[ 2025-04-05 14:47 ] save_score: False
+[ 2025-04-05 14:47 ] seed: 1
+[ 2025-04-05 14:47 ] show_topk: [1, 5]
+[ 2025-04-05 14:47 ] start_epoch: 0
+[ 2025-04-05 14:47 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 14:47 ] test_batch_size: 1
+[ 2025-04-05 14:47 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 14:47 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 14:47 ] warm_up_epoch: 5
+[ 2025-04-05 14:47 ] weight_decay: 0.0004
+[ 2025-04-05 14:47 ] weights: None
+[ 2025-04-05 14:47 ] work_dir: ./exp/h2o
+[ 2025-04-05 14:47 ] # Parameters: 32218391
+[ 2025-04-05 14:47 ] ###***************start training***************###
+[ 2025-04-05 14:47 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 14:58 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 14:58 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 14:58 ] Data load finished
+[ 2025-04-05 14:58 ] Optimizer load finished: AdamW
+[ 2025-04-05 14:58 ] base_lr: 0.001
+[ 2025-04-05 14:58 ] batch_size: 1
+[ 2025-04-05 14:58 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 14:58 ] cuda_visible_device: 0
+[ 2025-04-05 14:58 ] device: [0]
+[ 2025-04-05 14:58 ] eval_interval: 2
+[ 2025-04-05 14:58 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 14:58 ] ignore_weights: []
+[ 2025-04-05 14:58 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 14:58 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 14:58 ] lr_decay_rate: 0.2
+[ 2025-04-05 14:58 ] model: model.ISTANet.Model
+[ 2025-04-05 14:58 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 14:58 ] nesterov: True
+[ 2025-04-05 14:58 ] num_epoch: 150
+[ 2025-04-05 14:58 ] num_worker: 8
+[ 2025-04-05 14:58 ] optimizer: AdamW
+[ 2025-04-05 14:58 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 14:58 ] print_log: True
+[ 2025-04-05 14:58 ] run_mode: train
+[ 2025-04-05 14:58 ] save_epoch: 80
+[ 2025-04-05 14:58 ] save_score: False
+[ 2025-04-05 14:58 ] seed: 1
+[ 2025-04-05 14:58 ] show_topk: [1, 5]
+[ 2025-04-05 14:58 ] start_epoch: 0
+[ 2025-04-05 14:58 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 14:58 ] test_batch_size: 1
+[ 2025-04-05 14:58 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 14:58 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 14:58 ] warm_up_epoch: 5
+[ 2025-04-05 14:58 ] weight_decay: 0.0004
+[ 2025-04-05 14:58 ] weights: None
+[ 2025-04-05 14:58 ] work_dir: ./exp/h2o
+[ 2025-04-05 14:58 ] # Parameters: 32218391
+[ 2025-04-05 14:58 ] ###***************start training***************###
+[ 2025-04-05 14:58 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 15:03 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 15:03 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 15:03 ] Data load finished
+[ 2025-04-05 15:03 ] Optimizer load finished: AdamW
+[ 2025-04-05 15:03 ] base_lr: 0.001
+[ 2025-04-05 15:03 ] batch_size: 1
+[ 2025-04-05 15:03 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 15:03 ] cuda_visible_device: 0
+[ 2025-04-05 15:03 ] device: [0]
+[ 2025-04-05 15:03 ] eval_interval: 2
+[ 2025-04-05 15:03 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 15:03 ] ignore_weights: []
+[ 2025-04-05 15:03 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 15:03 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 15:03 ] lr_decay_rate: 0.2
+[ 2025-04-05 15:03 ] model: model.ISTANet.Model
+[ 2025-04-05 15:03 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 15:03 ] nesterov: True
+[ 2025-04-05 15:03 ] num_epoch: 150
+[ 2025-04-05 15:03 ] num_worker: 8
+[ 2025-04-05 15:03 ] optimizer: AdamW
+[ 2025-04-05 15:03 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 15:03 ] print_log: True
+[ 2025-04-05 15:03 ] run_mode: train
+[ 2025-04-05 15:03 ] save_epoch: 80
+[ 2025-04-05 15:03 ] save_score: False
+[ 2025-04-05 15:03 ] seed: 1
+[ 2025-04-05 15:03 ] show_topk: [1, 5]
+[ 2025-04-05 15:03 ] start_epoch: 0
+[ 2025-04-05 15:03 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 15:03 ] test_batch_size: 1
+[ 2025-04-05 15:03 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 15:03 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 15:03 ] warm_up_epoch: 5
+[ 2025-04-05 15:03 ] weight_decay: 0.0004
+[ 2025-04-05 15:03 ] weights: None
+[ 2025-04-05 15:03 ] work_dir: ./exp/h2o
+[ 2025-04-05 15:03 ] # Parameters: 32218391
+[ 2025-04-05 15:03 ] ###***************start training***************###
+[ 2025-04-05 15:03 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 15:03 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 15:03 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 15:03 ] Data load finished
+[ 2025-04-05 15:03 ] Optimizer load finished: AdamW
+[ 2025-04-05 15:03 ] base_lr: 0.001
+[ 2025-04-05 15:03 ] batch_size: 1
+[ 2025-04-05 15:03 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 15:03 ] cuda_visible_device: 0
+[ 2025-04-05 15:03 ] device: [0]
+[ 2025-04-05 15:03 ] eval_interval: 2
+[ 2025-04-05 15:03 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 15:03 ] ignore_weights: []
+[ 2025-04-05 15:03 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 15:03 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 15:03 ] lr_decay_rate: 0.2
+[ 2025-04-05 15:03 ] model: model.ISTANet.Model
+[ 2025-04-05 15:03 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 15:03 ] nesterov: True
+[ 2025-04-05 15:03 ] num_epoch: 150
+[ 2025-04-05 15:03 ] num_worker: 8
+[ 2025-04-05 15:03 ] optimizer: AdamW
+[ 2025-04-05 15:03 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 15:03 ] print_log: True
+[ 2025-04-05 15:03 ] run_mode: train
+[ 2025-04-05 15:03 ] save_epoch: 80
+[ 2025-04-05 15:03 ] save_score: False
+[ 2025-04-05 15:03 ] seed: 1
+[ 2025-04-05 15:03 ] show_topk: [1, 5]
+[ 2025-04-05 15:03 ] start_epoch: 0
+[ 2025-04-05 15:03 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 15:03 ] test_batch_size: 1
+[ 2025-04-05 15:03 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 15:03 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 15:03 ] warm_up_epoch: 5
+[ 2025-04-05 15:03 ] weight_decay: 0.0004
+[ 2025-04-05 15:03 ] weights: None
+[ 2025-04-05 15:03 ] work_dir: ./exp/h2o
+[ 2025-04-05 15:03 ] # Parameters: 32218391
+[ 2025-04-05 15:03 ] ###***************start training***************###
+[ 2025-04-05 15:03 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 15:10 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 15:10 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 15:10 ] Data load finished
+[ 2025-04-05 15:10 ] Optimizer load finished: AdamW
+[ 2025-04-05 15:10 ] base_lr: 0.001
+[ 2025-04-05 15:10 ] batch_size: 1
+[ 2025-04-05 15:10 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 15:10 ] cuda_visible_device: 0
+[ 2025-04-05 15:10 ] device: [0]
+[ 2025-04-05 15:10 ] eval_interval: 2
+[ 2025-04-05 15:10 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 15:10 ] ignore_weights: []
+[ 2025-04-05 15:10 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 15:10 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 15:10 ] lr_decay_rate: 0.2
+[ 2025-04-05 15:10 ] model: model.ISTANet.Model
+[ 2025-04-05 15:10 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 15:10 ] nesterov: True
+[ 2025-04-05 15:10 ] num_epoch: 150
+[ 2025-04-05 15:10 ] num_worker: 8
+[ 2025-04-05 15:10 ] optimizer: AdamW
+[ 2025-04-05 15:10 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 15:10 ] print_log: True
+[ 2025-04-05 15:10 ] run_mode: train
+[ 2025-04-05 15:10 ] save_epoch: 80
+[ 2025-04-05 15:10 ] save_score: False
+[ 2025-04-05 15:10 ] seed: 1
+[ 2025-04-05 15:10 ] show_topk: [1, 5]
+[ 2025-04-05 15:10 ] start_epoch: 0
+[ 2025-04-05 15:10 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 15:10 ] test_batch_size: 1
+[ 2025-04-05 15:10 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 15:10 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 15:10 ] warm_up_epoch: 5
+[ 2025-04-05 15:10 ] weight_decay: 0.0004
+[ 2025-04-05 15:10 ] weights: None
+[ 2025-04-05 15:10 ] work_dir: ./exp/h2o
+[ 2025-04-05 15:10 ] # Parameters: 32218391
+[ 2025-04-05 15:10 ] ###***************start training***************###
+[ 2025-04-05 15:10 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 15:12 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 15:12 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 15:12 ] Data load finished
+[ 2025-04-05 15:12 ] Optimizer load finished: AdamW
+[ 2025-04-05 15:12 ] base_lr: 0.001
+[ 2025-04-05 15:12 ] batch_size: 1
+[ 2025-04-05 15:12 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 15:12 ] cuda_visible_device: 0
+[ 2025-04-05 15:12 ] device: [0]
+[ 2025-04-05 15:12 ] eval_interval: 2
+[ 2025-04-05 15:12 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 15:12 ] ignore_weights: []
+[ 2025-04-05 15:12 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 15:12 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 15:12 ] lr_decay_rate: 0.2
+[ 2025-04-05 15:12 ] model: model.ISTANet.Model
+[ 2025-04-05 15:12 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 15:12 ] nesterov: True
+[ 2025-04-05 15:12 ] num_epoch: 150
+[ 2025-04-05 15:12 ] num_worker: 8
+[ 2025-04-05 15:12 ] optimizer: AdamW
+[ 2025-04-05 15:12 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 15:12 ] print_log: True
+[ 2025-04-05 15:12 ] run_mode: train
+[ 2025-04-05 15:12 ] save_epoch: 80
+[ 2025-04-05 15:12 ] save_score: False
+[ 2025-04-05 15:12 ] seed: 1
+[ 2025-04-05 15:12 ] show_topk: [1, 5]
+[ 2025-04-05 15:12 ] start_epoch: 0
+[ 2025-04-05 15:12 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 15:12 ] test_batch_size: 1
+[ 2025-04-05 15:12 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 15:12 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 15:12 ] warm_up_epoch: 5
+[ 2025-04-05 15:12 ] weight_decay: 0.0004
+[ 2025-04-05 15:12 ] weights: None
+[ 2025-04-05 15:12 ] work_dir: ./exp/h2o
+[ 2025-04-05 15:12 ] # Parameters: 32218391
+[ 2025-04-05 15:12 ] ###***************start training***************###
+[ 2025-04-05 15:12 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 15:13 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 15:13 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 15:13 ] Data load finished
+[ 2025-04-05 15:13 ] Optimizer load finished: AdamW
+[ 2025-04-05 15:13 ] base_lr: 0.001
+[ 2025-04-05 15:13 ] batch_size: 1
+[ 2025-04-05 15:13 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 15:13 ] cuda_visible_device: 0
+[ 2025-04-05 15:13 ] device: [0]
+[ 2025-04-05 15:13 ] eval_interval: 2
+[ 2025-04-05 15:13 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 15:13 ] ignore_weights: []
+[ 2025-04-05 15:13 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 15:13 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 15:13 ] lr_decay_rate: 0.2
+[ 2025-04-05 15:13 ] model: model.ISTANet.Model
+[ 2025-04-05 15:13 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 15:13 ] nesterov: True
+[ 2025-04-05 15:13 ] num_epoch: 150
+[ 2025-04-05 15:13 ] num_worker: 8
+[ 2025-04-05 15:13 ] optimizer: AdamW
+[ 2025-04-05 15:13 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 15:13 ] print_log: True
+[ 2025-04-05 15:13 ] run_mode: train
+[ 2025-04-05 15:13 ] save_epoch: 80
+[ 2025-04-05 15:13 ] save_score: False
+[ 2025-04-05 15:13 ] seed: 1
+[ 2025-04-05 15:13 ] show_topk: [1, 5]
+[ 2025-04-05 15:13 ] start_epoch: 0
+[ 2025-04-05 15:13 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 15:13 ] test_batch_size: 1
+[ 2025-04-05 15:13 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 15:13 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 15:13 ] warm_up_epoch: 5
+[ 2025-04-05 15:13 ] weight_decay: 0.0004
+[ 2025-04-05 15:13 ] weights: None
+[ 2025-04-05 15:13 ] work_dir: ./exp/h2o
+[ 2025-04-05 15:13 ] # Parameters: 32218391
+[ 2025-04-05 15:13 ] ###***************start training***************###
+[ 2025-04-05 15:13 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 15:59 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 15:59 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 15:59 ] Data load finished
+[ 2025-04-05 15:59 ] Optimizer load finished: AdamW
+[ 2025-04-05 15:59 ] base_lr: 0.001
+[ 2025-04-05 15:59 ] batch_size: 1
+[ 2025-04-05 15:59 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 15:59 ] cuda_visible_device: 0
+[ 2025-04-05 15:59 ] device: [0]
+[ 2025-04-05 15:59 ] eval_interval: 2
+[ 2025-04-05 15:59 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 15:59 ] ignore_weights: []
+[ 2025-04-05 15:59 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 15:59 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 15:59 ] lr_decay_rate: 0.2
+[ 2025-04-05 15:59 ] model: model.ISTANet.Model
+[ 2025-04-05 15:59 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 15:59 ] nesterov: True
+[ 2025-04-05 15:59 ] num_epoch: 150
+[ 2025-04-05 15:59 ] num_worker: 8
+[ 2025-04-05 15:59 ] optimizer: AdamW
+[ 2025-04-05 15:59 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 15:59 ] print_log: True
+[ 2025-04-05 15:59 ] run_mode: train
+[ 2025-04-05 15:59 ] save_epoch: 80
+[ 2025-04-05 15:59 ] save_score: False
+[ 2025-04-05 15:59 ] seed: 1
+[ 2025-04-05 15:59 ] show_topk: [1, 5]
+[ 2025-04-05 15:59 ] start_epoch: 0
+[ 2025-04-05 15:59 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 15:59 ] test_batch_size: 1
+[ 2025-04-05 15:59 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 15:59 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 15:59 ] warm_up_epoch: 5
+[ 2025-04-05 15:59 ] weight_decay: 0.0004
+[ 2025-04-05 15:59 ] weights: None
+[ 2025-04-05 15:59 ] work_dir: ./exp/h2o
+[ 2025-04-05 15:59 ] # Parameters: 32218391
+[ 2025-04-05 15:59 ] ###***************start training***************###
+[ 2025-04-05 15:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-05 16:06 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-05 16:06 ] Model load finished: model.ISTANet.Model
+[ 2025-04-05 16:06 ] Data load finished
+[ 2025-04-05 16:06 ] Optimizer load finished: AdamW
+[ 2025-04-05 16:06 ] base_lr: 0.001
+[ 2025-04-05 16:06 ] batch_size: 1
+[ 2025-04-05 16:06 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-05 16:06 ] cuda_visible_device: 0
+[ 2025-04-05 16:06 ] device: [0]
+[ 2025-04-05 16:06 ] eval_interval: 2
+[ 2025-04-05 16:06 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-05 16:06 ] ignore_weights: []
+[ 2025-04-05 16:06 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-05 16:06 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-05 16:06 ] lr_decay_rate: 0.2
+[ 2025-04-05 16:06 ] model: model.ISTANet.Model
+[ 2025-04-05 16:06 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-05 16:06 ] nesterov: True
+[ 2025-04-05 16:06 ] num_epoch: 150
+[ 2025-04-05 16:06 ] num_worker: 8
+[ 2025-04-05 16:06 ] optimizer: AdamW
+[ 2025-04-05 16:06 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-05 16:06 ] print_log: True
+[ 2025-04-05 16:06 ] run_mode: train
+[ 2025-04-05 16:06 ] save_epoch: 80
+[ 2025-04-05 16:06 ] save_score: False
+[ 2025-04-05 16:06 ] seed: 1
+[ 2025-04-05 16:06 ] show_topk: [1, 5]
+[ 2025-04-05 16:06 ] start_epoch: 0
+[ 2025-04-05 16:06 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-05 16:06 ] test_batch_size: 1
+[ 2025-04-05 16:06 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-05 16:06 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-05 16:06 ] warm_up_epoch: 5
+[ 2025-04-05 16:06 ] weight_decay: 0.0004
+[ 2025-04-05 16:06 ] weights: None
+[ 2025-04-05 16:06 ] work_dir: ./exp/h2o
+[ 2025-04-05 16:06 ] # Parameters: 32218391
+[ 2025-04-05 16:06 ] ###***************start training***************###
+[ 2025-04-05 16:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-06 14:28 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-06 14:28 ] Model load finished: model.ISTANet.Model
+[ 2025-04-06 14:28 ] Data load finished
+[ 2025-04-06 14:28 ] Optimizer load finished: AdamW
+[ 2025-04-06 14:28 ] base_lr: 0.001
+[ 2025-04-06 14:28 ] batch_size: 1
+[ 2025-04-06 14:28 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-06 14:28 ] cuda_visible_device: 0
+[ 2025-04-06 14:28 ] device: [0]
+[ 2025-04-06 14:28 ] eval_interval: 2
+[ 2025-04-06 14:28 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-06 14:28 ] ignore_weights: []
+[ 2025-04-06 14:28 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-06 14:28 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2025-04-06 14:28 ] lr_decay_rate: 0.2
+[ 2025-04-06 14:28 ] model: model.ISTANet.Model
+[ 2025-04-06 14:28 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 4, 'num_objs': 8, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-06 14:28 ] nesterov: True
+[ 2025-04-06 14:28 ] num_epoch: 150
+[ 2025-04-06 14:28 ] num_worker: 8
+[ 2025-04-06 14:28 ] optimizer: AdamW
+[ 2025-04-06 14:28 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-06 14:28 ] print_log: True
+[ 2025-04-06 14:28 ] run_mode: train
+[ 2025-04-06 14:28 ] save_epoch: 80
+[ 2025-04-06 14:28 ] save_score: False
+[ 2025-04-06 14:28 ] seed: 1
+[ 2025-04-06 14:28 ] show_topk: [1, 5]
+[ 2025-04-06 14:28 ] start_epoch: 0
+[ 2025-04-06 14:28 ] step: [35, 60, 80, 95, 120]
+[ 2025-04-06 14:28 ] test_batch_size: 1
+[ 2025-04-06 14:28 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-06 14:28 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-06 14:28 ] warm_up_epoch: 5
+[ 2025-04-06 14:28 ] weight_decay: 0.0004
+[ 2025-04-06 14:28 ] weights: None
+[ 2025-04-06 14:28 ] work_dir: ./exp/h2o
+[ 2025-04-06 14:28 ] # Parameters: 40414743
+[ 2025-04-06 14:28 ] ###***************start training***************###
+[ 2025-04-06 14:28 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-08 10:02 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 10:02 ] Model load finished: model.ISTANet.Model
+[ 2025-04-08 10:02 ] Data load finished
+[ 2025-04-08 10:02 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 10:02 ] Model load finished: model.ISTANet.Model
+[ 2025-04-08 10:02 ] Data load finished
+[ 2025-04-08 10:03 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 10:03 ] Model load finished: model.ISTANet.Model
+[ 2025-04-08 10:03 ] Data load finished
+[ 2025-04-08 19:04 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 19:04 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 19:04 ] Model load finished: model.ISTANet.Model
+[ 2025-04-08 19:04 ] Data load finished
+[ 2025-04-08 19:30 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 19:30 ] Model load finished: model.ISTANet.Model
+[ 2025-04-08 19:30 ] Data load finished
+[ 2025-04-08 21:17 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-08 21:17 ] Model load finished: model.ISTANet.Model
+[ 2025-04-08 21:17 ] Data load finished
+[ 2025-04-09 10:35 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-09 10:35 ] Model load finished: model.ISTANet.Model
+[ 2025-04-09 10:35 ] Data load finished
+[ 2025-04-09 11:05 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-09 11:05 ] Model load finished: model.ISTANet.Model
+[ 2025-04-09 11:05 ] Data load finished
+[ 2025-04-09 15:42 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-09 15:42 ] Model load finished: model.ISTANet.Model
+[ 2025-04-09 15:42 ] Data load finished
+[ 2025-04-09 16:25 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-09 16:25 ] Model load finished: model.ISTANet.Model
+[ 2025-04-09 16:25 ] Data load finished
+[ 2025-04-11 16:00 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-11 16:00 ] Model load finished: model.ISTANet.Model
+[ 2025-04-11 16:00 ] Data load finished
+[ 2025-04-11 16:11 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-11 16:11 ] Model load finished: model.ISTANet.Model
+[ 2025-04-11 16:11 ] Data load finished
+[ 2025-04-11 17:29 ] Load weights from D:/Downloads/h2o(4).pt
+[ 2025-04-11 17:29 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-11 17:29 ] Model load finished: model.ISTANet.Model
+[ 2025-04-11 17:29 ] Data load finished
+[ 2025-04-11 17:29 ] Optimizer load finished: AdamW
+[ 2025-04-11 17:29 ] base_lr: 0.001
+[ 2025-04-11 17:29 ] batch_size: 1
+[ 2025-04-11 17:29 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-11 17:29 ] cuda_visible_device: 0
+[ 2025-04-11 17:29 ] device: [0]
+[ 2025-04-11 17:29 ] eval_interval: 2
+[ 2025-04-11 17:29 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-11 17:29 ] ignore_weights: []
+[ 2025-04-11 17:29 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-11 17:29 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-11 17:29 ] lr_decay_rate: 0.5
+[ 2025-04-11 17:29 ] model: model.ISTANet.Model
+[ 2025-04-11 17:29 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-11 17:29 ] nesterov: True
+[ 2025-04-11 17:29 ] num_epoch: 150
+[ 2025-04-11 17:29 ] num_worker: 8
+[ 2025-04-11 17:29 ] optimizer: AdamW
+[ 2025-04-11 17:29 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-11 17:29 ] print_log: True
+[ 2025-04-11 17:29 ] run_mode: train
+[ 2025-04-11 17:29 ] save_epoch: 80
+[ 2025-04-11 17:29 ] save_score: False
+[ 2025-04-11 17:29 ] seed: 1
+[ 2025-04-11 17:29 ] show_topk: [1, 5]
+[ 2025-04-11 17:29 ] start_epoch: 0
+[ 2025-04-11 17:29 ] step: [50, 80, 110, 130]
+[ 2025-04-11 17:29 ] test_batch_size: 6
+[ 2025-04-11 17:29 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-11 17:29 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-11 17:29 ] warm_up_epoch: 5
+[ 2025-04-11 17:29 ] weight_decay: 0.0004
+[ 2025-04-11 17:29 ] weights: D:/Downloads/h2o(4).pt
+[ 2025-04-11 17:29 ] work_dir: ./exp/h2o
+[ 2025-04-11 17:29 ] # Parameters: 40414743
+[ 2025-04-11 17:29 ] ###***************start training***************###
+[ 2025-04-11 17:29 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-11 17:45 ] training: epoch: 1, loss: 0.0344, top1: 97.72%, lr: 0.000200, obj_loss: 0.0635, verb_loss:0.5957, obj_acc:98.0668%, verb_acc:98.9455%
+[ 2025-04-11 17:45 ] training: epoch: 1,weight_obj:1.00,weight_verb:0.00,weight_action:0.00
+[ 2025-04-11 17:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-11 17:59 ] training: epoch: 2, loss: 0.0985, top1: 90.51%, lr: 0.000400, obj_loss: 0.2623, verb_loss:0.8037, obj_acc:95.0791%, verb_acc:91.5641%
+[ 2025-04-11 17:59 ] training: epoch: 2,weight_obj:1.00,weight_verb:0.00,weight_action:0.00
+[ 2025-04-11 18:03 ] evaluating: loss: 4.4338, top1: 68.85%, best_acc: 68.85%,obj_loss: 1.2069,verb_loss:1.4723,obj_acc:85.2459%, verb_acc:73.7705%
+[ 2025-04-11 18:03 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-11 18:18 ] training: epoch: 3, loss: 0.4576, top1: 40.60%, lr: 0.000600, obj_loss: 1.2578, verb_loss:1.6807, obj_acc:81.8981%, verb_acc:56.7663%
+[ 2025-04-11 18:18 ] training: epoch: 3,weight_obj:1.00,weight_verb:0.00,weight_action:0.00
+[ 2025-04-11 18:18 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-11 18:33 ] training: epoch: 4, loss: 0.5103, top1: 21.62%, lr: 0.000800, obj_loss: 1.3622, verb_loss:1.9296, obj_acc:79.9649%, verb_acc:47.6274%
+[ 2025-04-11 18:33 ] training: epoch: 4,weight_obj:1.00,weight_verb:0.00,weight_action:0.00
+[ 2025-04-11 18:37 ] evaluating: loss: 11.7298, top1: 18.03%, best_acc: 68.85%,obj_loss: 4.7216,verb_loss:2.8183,obj_acc:69.6721%, verb_acc:42.6230%
+[ 2025-04-11 18:37 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-11 18:52 ] training: epoch: 5, loss: 0.8703, top1: 14.76%, lr: 0.001000, obj_loss: 2.7715, verb_loss:2.0329, obj_acc:68.0141%, verb_acc:47.2759%
+[ 2025-04-11 18:52 ] training: epoch: 5,weight_obj:1.00,weight_verb:0.00,weight_action:0.00
+[ 2025-04-11 18:52 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 17:26 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-12 17:26 ] Model load finished: model.ISTANet.Model
+[ 2025-04-12 17:26 ] Data load finished
+[ 2025-04-12 17:26 ] Optimizer load finished: AdamW
+[ 2025-04-12 17:26 ] base_lr: 0.001
+[ 2025-04-12 17:26 ] batch_size: 1
+[ 2025-04-12 17:26 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-12 17:26 ] cuda_visible_device: 0
+[ 2025-04-12 17:26 ] device: [0]
+[ 2025-04-12 17:26 ] eval_interval: 2
+[ 2025-04-12 17:26 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-12 17:26 ] ignore_weights: []
+[ 2025-04-12 17:26 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-12 17:26 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-12 17:26 ] lr_decay_rate: 0.5
+[ 2025-04-12 17:26 ] model: model.ISTANet.Model
+[ 2025-04-12 17:26 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-12 17:26 ] nesterov: True
+[ 2025-04-12 17:26 ] num_epoch: 150
+[ 2025-04-12 17:26 ] num_worker: 8
+[ 2025-04-12 17:26 ] optimizer: AdamW
+[ 2025-04-12 17:26 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-12 17:26 ] print_log: True
+[ 2025-04-12 17:26 ] run_mode: train
+[ 2025-04-12 17:26 ] save_epoch: 80
+[ 2025-04-12 17:26 ] save_score: False
+[ 2025-04-12 17:26 ] seed: 1
+[ 2025-04-12 17:26 ] show_topk: [1, 5]
+[ 2025-04-12 17:26 ] start_epoch: 0
+[ 2025-04-12 17:26 ] step: [50, 80, 110, 130]
+[ 2025-04-12 17:26 ] test_batch_size: 6
+[ 2025-04-12 17:26 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-12 17:26 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-12 17:26 ] warm_up_epoch: 5
+[ 2025-04-12 17:26 ] weight_decay: 0.0004
+[ 2025-04-12 17:26 ] weights: None
+[ 2025-04-12 17:26 ] work_dir: ./exp/h2o
+[ 2025-04-12 17:26 ] # Parameters: 40612119
+[ 2025-04-12 17:26 ] ###***************start training***************###
+[ 2025-04-12 17:26 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 17:39 ] training: epoch: 1, loss: 5.3931, top1: 9.67%, lr: 0.000200, obj_loss: 1.7403, verb_loss:2.0515, obj_acc:30.0527%, verb_acc:30.2285%
+
+[ 2025-04-12 17:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 17:52 ] training: epoch: 2, loss: 4.3664, top1: 20.91%, lr: 0.000400, obj_loss: 1.1746, verb_loss:1.7723, obj_acc:53.7786%, verb_acc:41.8278%
+
+[ 2025-04-12 17:55 ] evaluating: loss: 5.1367, top1: 11.48%, best_acc: 11.48%,obj_loss: 1.6336,verb_loss:2.2217,obj_acc:36.8852%, verb_acc:19.6721%
+
+[ 2025-04-12 17:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 18:08 ] training: epoch: 3, loss: 4.1419, top1: 25.13%, lr: 0.000600, obj_loss: 1.0926, verb_loss:1.7130, obj_acc:56.9420%, verb_acc:42.8822%
+
+[ 2025-04-12 18:08 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 18:21 ] training: epoch: 4, loss: 4.2409, top1: 21.44%, lr: 0.000800, obj_loss: 1.0775, verb_loss:1.7785, obj_acc:57.6450%, verb_acc:37.9613%
+
+[ 2025-04-12 18:25 ] evaluating: loss: 4.7294, top1: 21.31%, best_acc: 21.31%,obj_loss: 1.3990,verb_loss:1.9792,obj_acc:44.2623%, verb_acc:40.9836%
+
+[ 2025-04-12 18:25 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 18:38 ] training: epoch: 5, loss: 4.0081, top1: 24.96%, lr: 0.001000, obj_loss: 1.0187, verb_loss:1.6812, obj_acc:60.4569%, verb_acc:42.1793%
+
+[ 2025-04-12 18:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 18:51 ] training: epoch: 6, loss: 4.1969, top1: 23.73%, lr: 0.001000, obj_loss: 1.0853, verb_loss:1.8102, obj_acc:57.9965%, verb_acc:32.3374%
+
+[ 2025-04-12 18:55 ] evaluating: loss: 5.3068, top1: 9.84%, best_acc: 21.31%,obj_loss: 1.8802,verb_loss:2.0948,obj_acc:31.9672%, verb_acc:26.2295%
+
+[ 2025-04-12 18:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 20:23 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-12 20:23 ] Model load finished: model.ISTANet.Model
+[ 2025-04-12 20:23 ] Data load finished
+[ 2025-04-12 20:23 ] Optimizer load finished: AdamW
+[ 2025-04-12 20:23 ] base_lr: 0.001
+[ 2025-04-12 20:23 ] batch_size: 1
+[ 2025-04-12 20:23 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-12 20:23 ] cuda_visible_device: 0
+[ 2025-04-12 20:23 ] device: [0]
+[ 2025-04-12 20:23 ] eval_interval: 2
+[ 2025-04-12 20:23 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-12 20:23 ] ignore_weights: []
+[ 2025-04-12 20:23 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-12 20:23 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-12 20:23 ] lr_decay_rate: 0.5
+[ 2025-04-12 20:23 ] model: model.ISTANet.Model
+[ 2025-04-12 20:23 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64]]}
+[ 2025-04-12 20:23 ] nesterov: True
+[ 2025-04-12 20:23 ] num_epoch: 150
+[ 2025-04-12 20:23 ] num_worker: 8
+[ 2025-04-12 20:23 ] optimizer: AdamW
+[ 2025-04-12 20:23 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-12 20:23 ] print_log: True
+[ 2025-04-12 20:23 ] run_mode: train
+[ 2025-04-12 20:23 ] save_epoch: 80
+[ 2025-04-12 20:23 ] save_score: False
+[ 2025-04-12 20:23 ] seed: 1
+[ 2025-04-12 20:23 ] show_topk: [1, 5]
+[ 2025-04-12 20:23 ] start_epoch: 0
+[ 2025-04-12 20:23 ] step: [50, 80, 110, 130]
+[ 2025-04-12 20:23 ] test_batch_size: 6
+[ 2025-04-12 20:23 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-12 20:23 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-12 20:23 ] warm_up_epoch: 5
+[ 2025-04-12 20:23 ] weight_decay: 0.0004
+[ 2025-04-12 20:23 ] weights: None
+[ 2025-04-12 20:23 ] work_dir: ./exp/h2o
+[ 2025-04-12 20:23 ] # Parameters: 37071599
+[ 2025-04-12 20:23 ] ###***************start training***************###
+[ 2025-04-12 20:23 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 20:31 ] training: epoch: 1, loss: 5.7601, top1: 6.50%, lr: 0.000200, obj_loss: 1.8955, verb_loss:2.2121, obj_acc:24.2531%, verb_acc:24.4288%
+
+[ 2025-04-12 20:31 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 20:33 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-12 20:33 ] Model load finished: model.ISTANet.Model
+[ 2025-04-12 20:33 ] Data load finished
+[ 2025-04-12 20:33 ] Optimizer load finished: AdamW
+[ 2025-04-12 20:33 ] base_lr: 0.001
+[ 2025-04-12 20:33 ] batch_size: 1
+[ 2025-04-12 20:33 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-12 20:33 ] cuda_visible_device: 0
+[ 2025-04-12 20:33 ] device: [0]
+[ 2025-04-12 20:33 ] eval_interval: 2
+[ 2025-04-12 20:33 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-12 20:33 ] ignore_weights: []
+[ 2025-04-12 20:33 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-12 20:33 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-12 20:33 ] lr_decay_rate: 0.5
+[ 2025-04-12 20:33 ] model: model.ISTANet.Model
+[ 2025-04-12 20:33 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64]]}
+[ 2025-04-12 20:33 ] nesterov: True
+[ 2025-04-12 20:33 ] num_epoch: 150
+[ 2025-04-12 20:33 ] num_worker: 8
+[ 2025-04-12 20:33 ] optimizer: AdamW
+[ 2025-04-12 20:33 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-12 20:33 ] print_log: True
+[ 2025-04-12 20:33 ] run_mode: train
+[ 2025-04-12 20:33 ] save_epoch: 80
+[ 2025-04-12 20:33 ] save_score: False
+[ 2025-04-12 20:33 ] seed: 1
+[ 2025-04-12 20:33 ] show_topk: [1, 5]
+[ 2025-04-12 20:33 ] start_epoch: 0
+[ 2025-04-12 20:33 ] step: [50, 80, 110, 130]
+[ 2025-04-12 20:33 ] test_batch_size: 6
+[ 2025-04-12 20:33 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-12 20:33 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-12 20:33 ] warm_up_epoch: 5
+[ 2025-04-12 20:33 ] weight_decay: 0.0004
+[ 2025-04-12 20:33 ] weights: None
+[ 2025-04-12 20:33 ] work_dir: ./exp/h2o
+[ 2025-04-12 20:33 ] # Parameters: 37071087
+[ 2025-04-12 20:33 ] ###***************start training***************###
+[ 2025-04-12 20:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 20:41 ] training: epoch: 1, loss: 5.6110, top1: 6.68%, lr: 0.000200, obj_loss: 1.7598, verb_loss:2.2033, obj_acc:27.9438%, verb_acc:24.4288%
+
+[ 2025-04-12 20:41 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-12 20:51 ] training: epoch: 2, loss: 4.7795, top1: 13.53%, lr: 0.000400, obj_loss: 1.2483, verb_loss:2.0253, obj_acc:47.8032%, verb_acc:28.8225%
+
+[ 2025-04-12 20:55 ] evaluating: loss: 4.8883, top1: 5.74%, best_acc: 5.74%,obj_loss: 1.2880,verb_loss:2.1516,obj_acc:45.0820%, verb_acc:15.5738%
+
+[ 2025-04-12 20:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 13:48 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 13:48 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 13:48 ] Data load finished
+[ 2025-04-13 13:48 ] Optimizer load finished: AdamW
+[ 2025-04-13 13:48 ] base_lr: 0.001
+[ 2025-04-13 13:48 ] batch_size: 1
+[ 2025-04-13 13:48 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 13:48 ] cuda_visible_device: 0
+[ 2025-04-13 13:48 ] device: [0]
+[ 2025-04-13 13:48 ] eval_interval: 2
+[ 2025-04-13 13:48 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 13:48 ] ignore_weights: []
+[ 2025-04-13 13:48 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 13:48 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 13:48 ] lr_decay_rate: 0.5
+[ 2025-04-13 13:48 ] model: model.ISTANet.Model
+[ 2025-04-13 13:48 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 13:48 ] nesterov: True
+[ 2025-04-13 13:48 ] num_epoch: 150
+[ 2025-04-13 13:48 ] num_worker: 8
+[ 2025-04-13 13:48 ] optimizer: AdamW
+[ 2025-04-13 13:48 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 13:48 ] print_log: True
+[ 2025-04-13 13:48 ] run_mode: train
+[ 2025-04-13 13:48 ] save_epoch: 80
+[ 2025-04-13 13:48 ] save_score: False
+[ 2025-04-13 13:48 ] seed: 1
+[ 2025-04-13 13:48 ] show_topk: [1, 5]
+[ 2025-04-13 13:48 ] start_epoch: 0
+[ 2025-04-13 13:48 ] step: [50, 80, 110, 130]
+[ 2025-04-13 13:48 ] test_batch_size: 4
+[ 2025-04-13 13:48 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 13:48 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 13:48 ] warm_up_epoch: 5
+[ 2025-04-13 13:48 ] weight_decay: 0.0004
+[ 2025-04-13 13:48 ] weights: None
+[ 2025-04-13 13:48 ] work_dir: ./exp/h2o
+[ 2025-04-13 13:48 ] # Parameters: 43503383
+[ 2025-04-13 13:48 ] ###***************start training***************###
+[ 2025-04-13 13:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 13:48 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 13:48 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 13:48 ] Data load finished
+[ 2025-04-13 13:48 ] Optimizer load finished: AdamW
+[ 2025-04-13 13:48 ] base_lr: 0.001
+[ 2025-04-13 13:48 ] batch_size: 1
+[ 2025-04-13 13:48 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 13:48 ] cuda_visible_device: 0
+[ 2025-04-13 13:48 ] device: [0]
+[ 2025-04-13 13:48 ] eval_interval: 2
+[ 2025-04-13 13:48 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 13:48 ] ignore_weights: []
+[ 2025-04-13 13:48 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 13:48 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 13:48 ] lr_decay_rate: 0.5
+[ 2025-04-13 13:48 ] model: model.ISTANet.Model
+[ 2025-04-13 13:48 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 13:48 ] nesterov: True
+[ 2025-04-13 13:48 ] num_epoch: 150
+[ 2025-04-13 13:48 ] num_worker: 8
+[ 2025-04-13 13:48 ] optimizer: AdamW
+[ 2025-04-13 13:48 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 13:48 ] print_log: True
+[ 2025-04-13 13:48 ] run_mode: train
+[ 2025-04-13 13:48 ] save_epoch: 80
+[ 2025-04-13 13:48 ] save_score: False
+[ 2025-04-13 13:48 ] seed: 1
+[ 2025-04-13 13:48 ] show_topk: [1, 5]
+[ 2025-04-13 13:48 ] start_epoch: 0
+[ 2025-04-13 13:48 ] step: [50, 80, 110, 130]
+[ 2025-04-13 13:48 ] test_batch_size: 4
+[ 2025-04-13 13:48 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 13:48 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 13:48 ] warm_up_epoch: 5
+[ 2025-04-13 13:48 ] weight_decay: 0.0004
+[ 2025-04-13 13:48 ] weights: None
+[ 2025-04-13 13:48 ] work_dir: ./exp/h2o
+[ 2025-04-13 13:48 ] # Parameters: 43503383
+[ 2025-04-13 13:48 ] ###***************start training***************###
+[ 2025-04-13 13:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 13:50 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 13:50 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 13:50 ] Data load finished
+[ 2025-04-13 13:50 ] Optimizer load finished: AdamW
+[ 2025-04-13 13:50 ] base_lr: 0.001
+[ 2025-04-13 13:50 ] batch_size: 1
+[ 2025-04-13 13:50 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 13:50 ] cuda_visible_device: 0
+[ 2025-04-13 13:50 ] device: [0]
+[ 2025-04-13 13:50 ] eval_interval: 2
+[ 2025-04-13 13:50 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 13:50 ] ignore_weights: []
+[ 2025-04-13 13:50 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 13:50 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 13:50 ] lr_decay_rate: 0.5
+[ 2025-04-13 13:50 ] model: model.ISTANet.Model
+[ 2025-04-13 13:50 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 13:50 ] nesterov: True
+[ 2025-04-13 13:50 ] num_epoch: 150
+[ 2025-04-13 13:50 ] num_worker: 8
+[ 2025-04-13 13:50 ] optimizer: AdamW
+[ 2025-04-13 13:50 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 13:50 ] print_log: True
+[ 2025-04-13 13:50 ] run_mode: train
+[ 2025-04-13 13:50 ] save_epoch: 80
+[ 2025-04-13 13:50 ] save_score: False
+[ 2025-04-13 13:50 ] seed: 1
+[ 2025-04-13 13:50 ] show_topk: [1, 5]
+[ 2025-04-13 13:50 ] start_epoch: 0
+[ 2025-04-13 13:50 ] step: [50, 80, 110, 130]
+[ 2025-04-13 13:50 ] test_batch_size: 4
+[ 2025-04-13 13:50 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 13:50 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 13:50 ] warm_up_epoch: 5
+[ 2025-04-13 13:50 ] weight_decay: 0.0004
+[ 2025-04-13 13:50 ] weights: None
+[ 2025-04-13 13:50 ] work_dir: ./exp/h2o
+[ 2025-04-13 13:50 ] # Parameters: 43503383
+[ 2025-04-13 13:50 ] ###***************start training***************###
+[ 2025-04-13 13:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 13:51 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 13:51 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 13:51 ] Data load finished
+[ 2025-04-13 13:51 ] Optimizer load finished: AdamW
+[ 2025-04-13 13:51 ] base_lr: 0.001
+[ 2025-04-13 13:51 ] batch_size: 1
+[ 2025-04-13 13:51 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 13:51 ] cuda_visible_device: 0
+[ 2025-04-13 13:51 ] device: [0]
+[ 2025-04-13 13:51 ] eval_interval: 2
+[ 2025-04-13 13:51 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 13:51 ] ignore_weights: []
+[ 2025-04-13 13:51 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 13:51 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 13:51 ] lr_decay_rate: 0.5
+[ 2025-04-13 13:51 ] model: model.ISTANet.Model
+[ 2025-04-13 13:51 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 13:51 ] nesterov: True
+[ 2025-04-13 13:51 ] num_epoch: 150
+[ 2025-04-13 13:51 ] num_worker: 8
+[ 2025-04-13 13:51 ] optimizer: AdamW
+[ 2025-04-13 13:51 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 13:51 ] print_log: True
+[ 2025-04-13 13:51 ] run_mode: train
+[ 2025-04-13 13:51 ] save_epoch: 80
+[ 2025-04-13 13:51 ] save_score: False
+[ 2025-04-13 13:51 ] seed: 1
+[ 2025-04-13 13:51 ] show_topk: [1, 5]
+[ 2025-04-13 13:51 ] start_epoch: 0
+[ 2025-04-13 13:51 ] step: [50, 80, 110, 130]
+[ 2025-04-13 13:51 ] test_batch_size: 4
+[ 2025-04-13 13:51 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 13:51 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 13:51 ] warm_up_epoch: 5
+[ 2025-04-13 13:51 ] weight_decay: 0.0004
+[ 2025-04-13 13:51 ] weights: None
+[ 2025-04-13 13:51 ] work_dir: ./exp/h2o
+[ 2025-04-13 13:51 ] # Parameters: 43503383
+[ 2025-04-13 13:51 ] ###***************start training***************###
+[ 2025-04-13 13:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 13:54 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 13:54 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 13:54 ] Data load finished
+[ 2025-04-13 13:54 ] Optimizer load finished: AdamW
+[ 2025-04-13 13:54 ] base_lr: 0.001
+[ 2025-04-13 13:54 ] batch_size: 1
+[ 2025-04-13 13:54 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 13:54 ] cuda_visible_device: 0
+[ 2025-04-13 13:54 ] device: [0]
+[ 2025-04-13 13:54 ] eval_interval: 2
+[ 2025-04-13 13:54 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 13:54 ] ignore_weights: []
+[ 2025-04-13 13:54 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 13:54 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 13:54 ] lr_decay_rate: 0.5
+[ 2025-04-13 13:54 ] model: model.ISTANet.Model
+[ 2025-04-13 13:54 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 13:54 ] nesterov: True
+[ 2025-04-13 13:54 ] num_epoch: 150
+[ 2025-04-13 13:54 ] num_worker: 8
+[ 2025-04-13 13:54 ] optimizer: AdamW
+[ 2025-04-13 13:54 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 13:54 ] print_log: True
+[ 2025-04-13 13:54 ] run_mode: train
+[ 2025-04-13 13:54 ] save_epoch: 80
+[ 2025-04-13 13:54 ] save_score: False
+[ 2025-04-13 13:54 ] seed: 1
+[ 2025-04-13 13:54 ] show_topk: [1, 5]
+[ 2025-04-13 13:54 ] start_epoch: 0
+[ 2025-04-13 13:54 ] step: [50, 80, 110, 130]
+[ 2025-04-13 13:54 ] test_batch_size: 4
+[ 2025-04-13 13:54 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 13:54 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 13:54 ] warm_up_epoch: 5
+[ 2025-04-13 13:54 ] weight_decay: 0.0004
+[ 2025-04-13 13:54 ] weights: None
+[ 2025-04-13 13:54 ] work_dir: ./exp/h2o
+[ 2025-04-13 13:54 ] # Parameters: 43503383
+[ 2025-04-13 13:54 ] ###***************start training***************###
+[ 2025-04-13 13:54 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 14:22 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 14:22 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 14:22 ] Data load finished
+[ 2025-04-13 14:22 ] Optimizer load finished: AdamW
+[ 2025-04-13 14:22 ] base_lr: 0.001
+[ 2025-04-13 14:22 ] batch_size: 1
+[ 2025-04-13 14:22 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 14:22 ] cuda_visible_device: 0
+[ 2025-04-13 14:22 ] device: [0]
+[ 2025-04-13 14:22 ] eval_interval: 2
+[ 2025-04-13 14:22 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 14:22 ] ignore_weights: []
+[ 2025-04-13 14:22 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 14:22 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 14:22 ] lr_decay_rate: 0.5
+[ 2025-04-13 14:22 ] model: model.ISTANet.Model
+[ 2025-04-13 14:22 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 14:22 ] nesterov: True
+[ 2025-04-13 14:22 ] num_epoch: 150
+[ 2025-04-13 14:22 ] num_worker: 8
+[ 2025-04-13 14:22 ] optimizer: AdamW
+[ 2025-04-13 14:22 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 14:22 ] print_log: True
+[ 2025-04-13 14:22 ] run_mode: train
+[ 2025-04-13 14:22 ] save_epoch: 80
+[ 2025-04-13 14:22 ] save_score: False
+[ 2025-04-13 14:22 ] seed: 1
+[ 2025-04-13 14:22 ] show_topk: [1, 5]
+[ 2025-04-13 14:22 ] start_epoch: 0
+[ 2025-04-13 14:22 ] step: [50, 80, 110, 130]
+[ 2025-04-13 14:22 ] test_batch_size: 4
+[ 2025-04-13 14:22 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 14:22 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 14:22 ] warm_up_epoch: 5
+[ 2025-04-13 14:22 ] weight_decay: 0.0004
+[ 2025-04-13 14:22 ] weights: None
+[ 2025-04-13 14:22 ] work_dir: ./exp/h2o
+[ 2025-04-13 14:22 ] # Parameters: 43503383
+[ 2025-04-13 14:22 ] ###***************start training***************###
+[ 2025-04-13 14:22 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 14:40 ] training: epoch: 1, loss: 3.8948, top1: 4.39%, lr: 0.000200, obj_loss: 1.8786, verb_loss:2.2249,l1_loss:0.0232, obj_acc:27.0650%, verb_acc:23.7258%
+[ 2025-04-13 14:40 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 14:54 ] training: epoch: 2, loss: 3.4747, top1: 8.44%, lr: 0.000400, obj_loss: 1.5151, verb_loss:2.1476,l1_loss:0.0090, obj_acc:34.6221%, verb_acc:23.3743%
+[ 2025-04-13 14:58 ] evaluating: loss: 4.1586, top1: 10.66%, best_acc: 10.66%,obj_loss: 2.2813,verb_loss:2.2938,l1_loss:0.0063,obj_acc:31.1475%, verb_acc:23.7705%
+[ 2025-04-13 14:58 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 15:16 ] training: epoch: 3, loss: 3.4386, top1: 9.49%, lr: 0.000600, obj_loss: 1.4669, verb_loss:2.1618,l1_loss:0.0050, obj_acc:37.7856%, verb_acc:24.0773%
+[ 2025-04-13 15:16 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 15:34 ] training: epoch: 4, loss: 3.4040, top1: 9.31%, lr: 0.000800, obj_loss: 1.4907, verb_loss:2.1194,l1_loss:0.0017, obj_acc:36.9069%, verb_acc:25.3076%
+[ 2025-04-13 15:36 ] evaluating: loss: 3.4424, top1: 9.84%, best_acc: 10.66%,obj_loss: 1.4688,verb_loss:2.2171,l1_loss:0.0010,obj_acc:34.4262%, verb_acc:18.8525%
+[ 2025-04-13 15:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 15:54 ] training: epoch: 5, loss: 3.3023, top1: 8.61%, lr: 0.001000, obj_loss: 1.3680, verb_loss:2.1171,l1_loss:0.0010, obj_acc:38.6643%, verb_acc:20.9139%
+[ 2025-04-13 15:54 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-13 16:14 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-13 16:14 ] Model load finished: model.ISTANet.Model
+[ 2025-04-13 16:14 ] Data load finished
+[ 2025-04-13 16:14 ] Optimizer load finished: AdamW
+[ 2025-04-13 16:14 ] base_lr: 0.001
+[ 2025-04-13 16:14 ] batch_size: 1
+[ 2025-04-13 16:14 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-13 16:14 ] cuda_visible_device: 0
+[ 2025-04-13 16:14 ] device: [0]
+[ 2025-04-13 16:14 ] eval_interval: 2
+[ 2025-04-13 16:14 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-13 16:14 ] ignore_weights: []
+[ 2025-04-13 16:14 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-13 16:14 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-13 16:14 ] lr_decay_rate: 0.5
+[ 2025-04-13 16:14 ] model: model.ISTANet.Model
+[ 2025-04-13 16:14 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-13 16:14 ] nesterov: True
+[ 2025-04-13 16:14 ] num_epoch: 150
+[ 2025-04-13 16:14 ] num_worker: 8
+[ 2025-04-13 16:14 ] optimizer: AdamW
+[ 2025-04-13 16:14 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-13 16:14 ] print_log: True
+[ 2025-04-13 16:14 ] run_mode: train
+[ 2025-04-13 16:14 ] save_epoch: 80
+[ 2025-04-13 16:14 ] save_score: False
+[ 2025-04-13 16:14 ] seed: 1
+[ 2025-04-13 16:14 ] show_topk: [1, 5]
+[ 2025-04-13 16:14 ] start_epoch: 0
+[ 2025-04-13 16:14 ] step: [50, 80, 110, 130]
+[ 2025-04-13 16:14 ] test_batch_size: 4
+[ 2025-04-13 16:14 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-13 16:14 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-13 16:14 ] warm_up_epoch: 5
+[ 2025-04-13 16:14 ] weight_decay: 0.0004
+[ 2025-04-13 16:14 ] weights: None
+[ 2025-04-13 16:14 ] work_dir: ./exp/h2o
+[ 2025-04-13 16:14 ] # Parameters: 43503383
+[ 2025-04-13 16:14 ] ###***************start training***************###
+[ 2025-04-13 16:14 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 10:38 ] Load weights from D:/Downloads/h2o(5).pt
+[ 2025-04-14 10:38 ] Model load finished: model.ISTANet.Model
+[ 2025-04-14 10:38 ] Data load finished
+[ 2025-04-14 10:41 ] Load weights from D:/Downloads/h2o(5).pt
+[ 2025-04-14 10:41 ] Model load finished: model.ISTANet.Model
+[ 2025-04-14 10:41 ] Data load finished
+[ 2025-04-14 14:46 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-14 14:46 ] Model load finished: model.ISTANet.Model
+[ 2025-04-14 14:46 ] Data load finished
+[ 2025-04-14 14:46 ] Optimizer load finished: AdamW
+[ 2025-04-14 14:46 ] base_lr: 0.001
+[ 2025-04-14 14:46 ] batch_size: 1
+[ 2025-04-14 14:46 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-14 14:46 ] cuda_visible_device: 0
+[ 2025-04-14 14:46 ] device: [0]
+[ 2025-04-14 14:46 ] eval_interval: 2
+[ 2025-04-14 14:46 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-14 14:46 ] ignore_weights: []
+[ 2025-04-14 14:46 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-14 14:46 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-14 14:46 ] lr_decay_rate: 0.5
+[ 2025-04-14 14:46 ] model: model.ISTANet.Model
+[ 2025-04-14 14:46 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-14 14:46 ] nesterov: True
+[ 2025-04-14 14:46 ] num_epoch: 150
+[ 2025-04-14 14:46 ] num_worker: 8
+[ 2025-04-14 14:46 ] optimizer: AdamW
+[ 2025-04-14 14:46 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-14 14:46 ] print_log: True
+[ 2025-04-14 14:46 ] run_mode: train
+[ 2025-04-14 14:46 ] save_epoch: 80
+[ 2025-04-14 14:46 ] save_score: False
+[ 2025-04-14 14:46 ] seed: 1
+[ 2025-04-14 14:46 ] show_topk: [1, 5]
+[ 2025-04-14 14:46 ] start_epoch: 0
+[ 2025-04-14 14:46 ] step: [50, 80, 110, 130]
+[ 2025-04-14 14:46 ] test_batch_size: 4
+[ 2025-04-14 14:46 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-14 14:46 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-14 14:46 ] warm_up_epoch: 5
+[ 2025-04-14 14:46 ] weight_decay: 0.0004
+[ 2025-04-14 14:46 ] weights: None
+[ 2025-04-14 14:46 ] work_dir: ./exp/h2o
+[ 2025-04-14 14:46 ] # Parameters: 43503383
+[ 2025-04-14 14:46 ] ###***************start training***************###
+[ 2025-04-14 14:46 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 15:35 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-14 15:35 ] Model load finished: model.ISTANet.Model
+[ 2025-04-14 15:35 ] Data load finished
+[ 2025-04-14 15:35 ] Optimizer load finished: SGD
+[ 2025-04-14 15:35 ] base_lr: 0.01
+[ 2025-04-14 15:35 ] batch_size: 1
+[ 2025-04-14 15:35 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-14 15:35 ] cuda_visible_device: 0
+[ 2025-04-14 15:35 ] device: [0]
+[ 2025-04-14 15:35 ] eval_interval: 2
+[ 2025-04-14 15:35 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-14 15:35 ] ignore_weights: []
+[ 2025-04-14 15:35 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-14 15:35 ] loss_args: {'smoothing': 0.05, 'temperature': 1.0}
+[ 2025-04-14 15:35 ] lr_decay_rate: 0.5
+[ 2025-04-14 15:35 ] model: model.ISTANet.Model
+[ 2025-04-14 15:35 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-14 15:35 ] nesterov: True
+[ 2025-04-14 15:35 ] num_epoch: 150
+[ 2025-04-14 15:35 ] num_worker: 8
+[ 2025-04-14 15:35 ] optimizer: SGD
+[ 2025-04-14 15:35 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-14 15:35 ] print_log: True
+[ 2025-04-14 15:35 ] run_mode: train
+[ 2025-04-14 15:35 ] save_epoch: 80
+[ 2025-04-14 15:35 ] save_score: False
+[ 2025-04-14 15:35 ] seed: 1
+[ 2025-04-14 15:35 ] show_topk: [1, 5]
+[ 2025-04-14 15:35 ] start_epoch: 0
+[ 2025-04-14 15:35 ] step: [30, 60, 90, 120]
+[ 2025-04-14 15:35 ] test_batch_size: 4
+[ 2025-04-14 15:35 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-14 15:35 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-14 15:35 ] warm_up_epoch: 5
+[ 2025-04-14 15:35 ] weight_decay: 0.0001
+[ 2025-04-14 15:35 ] weights: None
+[ 2025-04-14 15:35 ] work_dir: ./exp/h2o
+[ 2025-04-14 15:35 ] # Parameters: 45606167
+[ 2025-04-14 15:35 ] ###***************start training***************###
+[ 2025-04-14 15:35 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 15:49 ] training: epoch: 1, loss: 10.1584, top1: 2.46%, lr: 0.002000, obj_loss: 2.5114, verb_loss:2.3903,l1_loss:0.0925, obj_acc:12.6538%, verb_acc:20.5624%
+[ 2025-04-14 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 16:03 ] training: epoch: 2, loss: 9.3344, top1: 3.34%, lr: 0.004000, obj_loss: 2.2549, verb_loss:2.2180,l1_loss:0.0388, obj_acc:12.8295%, verb_acc:24.7803%
+[ 2025-04-14 16:06 ] evaluating: loss: 9.0395, top1: 4.92%, best_acc: 4.92%,obj_loss: 2.0816,verb_loss:2.2595,l1_loss:0.0133,obj_acc:13.9344%, verb_acc:24.5902%
+[ 2025-04-14 16:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 16:13 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-14 16:13 ] Model load finished: model.ISTANet.Model
+[ 2025-04-14 16:13 ] Data load finished
+[ 2025-04-14 16:13 ] Optimizer load finished: SGD
+[ 2025-04-14 16:13 ] base_lr: 0.01
+[ 2025-04-14 16:13 ] batch_size: 1
+[ 2025-04-14 16:13 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-14 16:13 ] cuda_visible_device: 0
+[ 2025-04-14 16:13 ] device: [0]
+[ 2025-04-14 16:13 ] eval_interval: 2
+[ 2025-04-14 16:13 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-14 16:13 ] ignore_weights: []
+[ 2025-04-14 16:13 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-14 16:13 ] loss_args: {'smoothing': 0.05, 'temperature': 1.0}
+[ 2025-04-14 16:13 ] lr_decay_rate: 0.5
+[ 2025-04-14 16:13 ] model: model.ISTANet.Model
+[ 2025-04-14 16:13 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-14 16:13 ] nesterov: True
+[ 2025-04-14 16:13 ] num_epoch: 150
+[ 2025-04-14 16:13 ] num_worker: 8
+[ 2025-04-14 16:13 ] optimizer: SGD
+[ 2025-04-14 16:13 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-14 16:13 ] print_log: True
+[ 2025-04-14 16:13 ] run_mode: train
+[ 2025-04-14 16:13 ] save_epoch: 80
+[ 2025-04-14 16:13 ] save_score: False
+[ 2025-04-14 16:13 ] seed: 1
+[ 2025-04-14 16:13 ] show_topk: [1, 5]
+[ 2025-04-14 16:13 ] start_epoch: 0
+[ 2025-04-14 16:13 ] step: [30, 60, 90, 120]
+[ 2025-04-14 16:13 ] test_batch_size: 4
+[ 2025-04-14 16:13 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-14 16:13 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-14 16:13 ] warm_up_epoch: 5
+[ 2025-04-14 16:13 ] weight_decay: 0.0001
+[ 2025-04-14 16:13 ] weights: None
+[ 2025-04-14 16:13 ] work_dir: ./exp/h2o
+[ 2025-04-14 16:13 ] # Parameters: 43503383
+[ 2025-04-14 16:13 ] ###***************start training***************###
+[ 2025-04-14 16:13 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 16:31 ] training: epoch: 1, loss: 10.1370, top1: 2.46%, lr: 0.002000, obj_loss: 2.5137, verb_loss:2.3719,l1_loss:0.0916, obj_acc:12.6538%, verb_acc:23.5501%
+[ 2025-04-14 16:31 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 16:50 ] training: epoch: 2, loss: 9.3881, top1: 2.81%, lr: 0.004000, obj_loss: 2.2696, verb_loss:2.2343,l1_loss:0.0383, obj_acc:15.1142%, verb_acc:21.9684%
+[ 2025-04-14 16:53 ] evaluating: loss: 8.9935, top1: 2.46%, best_acc: 2.46%,obj_loss: 2.1259,verb_loss:2.1671,l1_loss:0.0133,obj_acc:13.9344%, verb_acc:24.5902%
+[ 2025-04-14 16:53 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 17:11 ] training: epoch: 3, loss: 9.6756, top1: 3.51%, lr: 0.006000, obj_loss: 2.3685, verb_loss:2.2968,l1_loss:0.0266, obj_acc:14.4112%, verb_acc:24.2531%
+[ 2025-04-14 17:11 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 17:35 ] training: epoch: 4, loss: 10.9623, top1: 5.27%, lr: 0.008000, obj_loss: 2.9452, verb_loss:2.4801,l1_loss:0.0213, obj_acc:15.2900%, verb_acc:25.4833%
+[ 2025-04-14 17:38 ] evaluating: loss: 8.8625, top1: 4.92%, best_acc: 4.92%,obj_loss: 2.0422,verb_loss:2.1945,l1_loss:0.0139,obj_acc:19.6721%, verb_acc:24.5902%
+[ 2025-04-14 17:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 17:57 ] training: epoch: 5, loss: 11.6206, top1: 4.04%, lr: 0.010000, obj_loss: 3.1469, verb_loss:2.7055,l1_loss:0.0172, obj_acc:17.0475%, verb_acc:21.4411%
+[ 2025-04-14 17:57 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-14 18:16 ] training: epoch: 6, loss: 9.1834, top1: 5.98%, lr: 0.010000, obj_loss: 2.1843, verb_loss:2.3314,l1_loss:0.0116, obj_acc:19.5079%, verb_acc:21.4411%
+[ 2025-04-14 18:19 ] evaluating: loss: 9.1568, top1: 7.38%, best_acc: 7.38%,obj_loss: 2.0856,verb_loss:2.3999,l1_loss:0.0130,obj_acc:21.3115%, verb_acc:24.5902%
+[ 2025-04-14 18:19 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 12:51 ] Load weights from D:/Downloads/h2o6.pt
+[ 2025-04-15 12:51 ] Model load finished: model.ISTANet.Model
+[ 2025-04-15 12:51 ] Data load finished
+[ 2025-04-15 13:52 ] Load weights from D:/Downloads/h2o6.pt
+[ 2025-04-15 13:52 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-15 13:52 ] Model load finished: model.ISTANet.Model
+[ 2025-04-15 13:52 ] Data load finished
+[ 2025-04-15 13:52 ] Optimizer load finished: AdamW
+[ 2025-04-15 13:52 ] base_lr: 0.001
+[ 2025-04-15 13:52 ] batch_size: 1
+[ 2025-04-15 13:52 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-15 13:52 ] cuda_visible_device: 0
+[ 2025-04-15 13:52 ] device: [0]
+[ 2025-04-15 13:52 ] eval_interval: 2
+[ 2025-04-15 13:52 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-15 13:52 ] ignore_weights: []
+[ 2025-04-15 13:52 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-15 13:52 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-15 13:52 ] lr_decay_rate: 0.5
+[ 2025-04-15 13:52 ] model: model.ISTANet.Model
+[ 2025-04-15 13:52 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-15 13:52 ] nesterov: True
+[ 2025-04-15 13:52 ] num_epoch: 150
+[ 2025-04-15 13:52 ] num_worker: 8
+[ 2025-04-15 13:52 ] optimizer: AdamW
+[ 2025-04-15 13:52 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-15 13:52 ] print_log: True
+[ 2025-04-15 13:52 ] run_mode: train
+[ 2025-04-15 13:52 ] save_epoch: 80
+[ 2025-04-15 13:52 ] save_score: False
+[ 2025-04-15 13:52 ] seed: 1
+[ 2025-04-15 13:52 ] show_topk: [1, 5]
+[ 2025-04-15 13:52 ] start_epoch: 0
+[ 2025-04-15 13:52 ] step: [50, 80, 110, 130]
+[ 2025-04-15 13:52 ] test_batch_size: 4
+[ 2025-04-15 13:52 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-15 13:52 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-15 13:52 ] warm_up_epoch: 5
+[ 2025-04-15 13:52 ] weight_decay: 0.0004
+[ 2025-04-15 13:52 ] weights: D:/Downloads/h2o6.pt
+[ 2025-04-15 13:52 ] work_dir: ./exp/h2o
+[ 2025-04-15 13:52 ] # Parameters: 34960087
+[ 2025-04-15 13:52 ] ###***************start training***************###
+[ 2025-04-15 13:52 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 13:53 ] Load weights from D:/Downloads/h2o6.pt
+[ 2025-04-15 13:53 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-15 13:53 ] Model load finished: model.ISTANet.Model
+[ 2025-04-15 13:53 ] Data load finished
+[ 2025-04-15 13:53 ] Optimizer load finished: AdamW
+[ 2025-04-15 13:53 ] base_lr: 0.001
+[ 2025-04-15 13:53 ] batch_size: 4
+[ 2025-04-15 13:53 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-15 13:53 ] cuda_visible_device: 0
+[ 2025-04-15 13:53 ] device: [0]
+[ 2025-04-15 13:53 ] eval_interval: 2
+[ 2025-04-15 13:53 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-15 13:53 ] ignore_weights: []
+[ 2025-04-15 13:53 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-15 13:53 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-15 13:53 ] lr_decay_rate: 0.5
+[ 2025-04-15 13:53 ] model: model.ISTANet.Model
+[ 2025-04-15 13:53 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-15 13:53 ] nesterov: True
+[ 2025-04-15 13:53 ] num_epoch: 150
+[ 2025-04-15 13:53 ] num_worker: 8
+[ 2025-04-15 13:53 ] optimizer: AdamW
+[ 2025-04-15 13:53 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-15 13:53 ] print_log: True
+[ 2025-04-15 13:53 ] run_mode: train
+[ 2025-04-15 13:53 ] save_epoch: 80
+[ 2025-04-15 13:53 ] save_score: False
+[ 2025-04-15 13:53 ] seed: 1
+[ 2025-04-15 13:53 ] show_topk: [1, 5]
+[ 2025-04-15 13:53 ] start_epoch: 0
+[ 2025-04-15 13:53 ] step: [50, 80, 110, 130]
+[ 2025-04-15 13:53 ] test_batch_size: 8
+[ 2025-04-15 13:53 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-15 13:53 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-15 13:53 ] warm_up_epoch: 5
+[ 2025-04-15 13:53 ] weight_decay: 0.0004
+[ 2025-04-15 13:53 ] weights: D:/Downloads/h2o6.pt
+[ 2025-04-15 13:53 ] work_dir: ./exp/h2o
+[ 2025-04-15 13:53 ] # Parameters: 34960087
+[ 2025-04-15 13:53 ] ###***************start training***************###
+[ 2025-04-15 13:53 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 13:55 ] training: epoch: 1, loss: 2.1319, top1: 88.56%, lr: 0.000200, obj_loss: 0.1367, verb_loss:0.7715,l1_loss:0.0103, obj_acc:94.1901%, verb_acc:91.9014%
+[ 2025-04-15 13:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 13:56 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-15 13:56 ] Model load finished: model.ISTANet.Model
+[ 2025-04-15 13:56 ] Data load finished
+[ 2025-04-15 13:56 ] Optimizer load finished: AdamW
+[ 2025-04-15 13:56 ] base_lr: 0.001
+[ 2025-04-15 13:56 ] batch_size: 4
+[ 2025-04-15 13:56 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-15 13:56 ] cuda_visible_device: 0
+[ 2025-04-15 13:56 ] device: [0]
+[ 2025-04-15 13:56 ] eval_interval: 2
+[ 2025-04-15 13:56 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-15 13:56 ] ignore_weights: []
+[ 2025-04-15 13:56 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-15 13:56 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2025-04-15 13:56 ] lr_decay_rate: 0.5
+[ 2025-04-15 13:56 ] model: model.ISTANet.Model
+[ 2025-04-15 13:56 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-15 13:56 ] nesterov: True
+[ 2025-04-15 13:56 ] num_epoch: 150
+[ 2025-04-15 13:56 ] num_worker: 8
+[ 2025-04-15 13:56 ] optimizer: AdamW
+[ 2025-04-15 13:56 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-15 13:56 ] print_log: True
+[ 2025-04-15 13:56 ] run_mode: train
+[ 2025-04-15 13:56 ] save_epoch: 80
+[ 2025-04-15 13:56 ] save_score: False
+[ 2025-04-15 13:56 ] seed: 1
+[ 2025-04-15 13:56 ] show_topk: [1, 5]
+[ 2025-04-15 13:56 ] start_epoch: 0
+[ 2025-04-15 13:56 ] step: [50, 80, 110, 130]
+[ 2025-04-15 13:56 ] test_batch_size: 8
+[ 2025-04-15 13:56 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-15 13:56 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-15 13:56 ] warm_up_epoch: 5
+[ 2025-04-15 13:56 ] weight_decay: 0.0004
+[ 2025-04-15 13:56 ] weights: None
+[ 2025-04-15 13:56 ] work_dir: ./exp/h2o
+[ 2025-04-15 13:56 ] # Parameters: 34960087
+[ 2025-04-15 13:56 ] ###***************start training***************###
+[ 2025-04-15 13:56 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 13:59 ] training: epoch: 1, loss: 8.3385, top1: 5.63%, lr: 0.000200, obj_loss: 1.7096, verb_loss:2.1793,l1_loss:0.0471, obj_acc:35.5634%, verb_acc:24.4718%
+[ 2025-04-15 13:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:01 ] training: epoch: 2, loss: 5.8928, top1: 17.25%, lr: 0.000400, obj_loss: 0.7188, verb_loss:2.0444,l1_loss:0.0179, obj_acc:70.7746%, verb_acc:23.2394%
+[ 2025-04-15 14:02 ] evaluating: loss: 5.0944, top1: 24.59%, best_acc: 24.59%,obj_loss: 0.2948,verb_loss:2.0377,l1_loss:0.0095,obj_acc:85.2459%, verb_acc:23.7705%
+[ 2025-04-15 14:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:06 ] training: epoch: 3, loss: 5.3690, top1: 22.01%, lr: 0.000600, obj_loss: 0.5188, verb_loss:2.0035,l1_loss:0.0151, obj_acc:78.6972%, verb_acc:24.2958%
+[ 2025-04-15 14:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:09 ] training: epoch: 4, loss: 4.9893, top1: 26.58%, lr: 0.000800, obj_loss: 0.4166, verb_loss:1.9268,l1_loss:0.0133, obj_acc:83.8028%, verb_acc:26.5845%
+[ 2025-04-15 14:10 ] evaluating: loss: 7.1764, top1: 22.13%, best_acc: 24.59%,obj_loss: 1.3233,verb_loss:2.2170,l1_loss:0.0090,obj_acc:74.5902%, verb_acc:25.4098%
+[ 2025-04-15 14:10 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:13 ] training: epoch: 5, loss: 5.7227, top1: 21.83%, lr: 0.001000, obj_loss: 0.7726, verb_loss:1.9098,l1_loss:0.0113, obj_acc:71.8310%, verb_acc:28.8732%
+[ 2025-04-15 14:13 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:17 ] training: epoch: 6, loss: 5.7923, top1: 19.54%, lr: 0.001000, obj_loss: 0.7860, verb_loss:1.9352,l1_loss:0.0098, obj_acc:70.7746%, verb_acc:25.7042%
+[ 2025-04-15 14:18 ] evaluating: loss: 6.8357, top1: 21.31%, best_acc: 24.59%,obj_loss: 1.3776,verb_loss:1.9036,l1_loss:0.0059,obj_acc:64.7541%, verb_acc:31.9672%
+[ 2025-04-15 14:18 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:22 ] training: epoch: 7, loss: 5.4156, top1: 24.12%, lr: 0.001000, obj_loss: 0.6941, verb_loss:1.8519,l1_loss:0.0094, obj_acc:73.2394%, verb_acc:28.6972%
+[ 2025-04-15 14:22 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:25 ] training: epoch: 8, loss: 5.5546, top1: 25.18%, lr: 0.001000, obj_loss: 0.7481, verb_loss:1.8842,l1_loss:0.0092, obj_acc:72.7113%, verb_acc:30.4577%
+[ 2025-04-15 14:27 ] evaluating: loss: 5.0199, top1: 28.69%, best_acc: 28.69%,obj_loss: 0.5565,verb_loss:1.8125,l1_loss:0.0055,obj_acc:77.8689%, verb_acc:34.4262%
+[ 2025-04-15 14:27 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:30 ] training: epoch: 9, loss: 5.1587, top1: 27.29%, lr: 0.001000, obj_loss: 0.6241, verb_loss:1.8253,l1_loss:0.0091, obj_acc:74.1197%, verb_acc:30.8099%
+[ 2025-04-15 14:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:33 ] training: epoch: 10, loss: 4.8677, top1: 31.87%, lr: 0.001000, obj_loss: 0.5603, verb_loss:1.7549,l1_loss:0.0092, obj_acc:77.4648%, verb_acc:31.6901%
+[ 2025-04-15 14:35 ] evaluating: loss: 4.8038, top1: 32.79%, best_acc: 32.79%,obj_loss: 0.5329,verb_loss:1.6271,l1_loss:0.0064,obj_acc:86.8852%, verb_acc:45.0820%
+[ 2025-04-15 14:35 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:38 ] training: epoch: 11, loss: 4.7476, top1: 30.46%, lr: 0.001000, obj_loss: 0.4929, verb_loss:1.7453,l1_loss:0.0090, obj_acc:81.8662%, verb_acc:34.1549%
+[ 2025-04-15 14:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:42 ] training: epoch: 12, loss: 4.6343, top1: 32.04%, lr: 0.001000, obj_loss: 0.4732, verb_loss:1.7014,l1_loss:0.0091, obj_acc:82.0423%, verb_acc:36.7958%
+[ 2025-04-15 14:43 ] evaluating: loss: 4.9087, top1: 34.43%, best_acc: 34.43%,obj_loss: 0.4272,verb_loss:1.8672,l1_loss:0.0059,obj_acc:86.8852%, verb_acc:34.4262%
+[ 2025-04-15 14:43 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:47 ] training: epoch: 13, loss: 6.0389, top1: 25.70%, lr: 0.001000, obj_loss: 1.0511, verb_loss:1.8142,l1_loss:0.0088, obj_acc:65.1408%, verb_acc:35.3873%
+[ 2025-04-15 14:47 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:50 ] training: epoch: 14, loss: 7.1938, top1: 12.85%, lr: 0.001000, obj_loss: 1.3692, verb_loss:2.0567,l1_loss:0.0082, obj_acc:41.1972%, verb_acc:24.2958%
+[ 2025-04-15 14:52 ] evaluating: loss: 6.3359, top1: 21.31%, best_acc: 34.43%,obj_loss: 1.1952,verb_loss:1.8288,l1_loss:0.0054,obj_acc:48.3607%, verb_acc:30.3279%
+[ 2025-04-15 14:52 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:55 ] training: epoch: 15, loss: 6.3408, top1: 15.85%, lr: 0.001000, obj_loss: 1.0991, verb_loss:1.9107,l1_loss:0.0078, obj_acc:47.3592%, verb_acc:28.8732%
+[ 2025-04-15 14:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 14:58 ] training: epoch: 16, loss: 5.9019, top1: 21.13%, lr: 0.001000, obj_loss: 0.9753, verb_loss:1.8073,l1_loss:0.0079, obj_acc:58.0986%, verb_acc:30.2817%
+[ 2025-04-15 14:59 ] evaluating: loss: 5.6931, top1: 27.87%, best_acc: 34.43%,obj_loss: 1.0414,verb_loss:1.6658,l1_loss:0.0059,obj_acc:56.5574%, verb_acc:38.5246%
+[ 2025-04-15 14:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:02 ] training: epoch: 17, loss: 5.4872, top1: 26.23%, lr: 0.001000, obj_loss: 0.8600, verb_loss:1.7177,l1_loss:0.0079, obj_acc:61.9718%, verb_acc:34.3310%
+[ 2025-04-15 15:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:05 ] training: epoch: 18, loss: 5.2149, top1: 27.82%, lr: 0.001000, obj_loss: 0.7754, verb_loss:1.6635,l1_loss:0.0079, obj_acc:66.9014%, verb_acc:36.2676%
+[ 2025-04-15 15:06 ] evaluating: loss: 4.8558, top1: 33.61%, best_acc: 34.43%,obj_loss: 0.6539,verb_loss:1.6165,l1_loss:0.0059,obj_acc:71.3115%, verb_acc:50.0000%
+[ 2025-04-15 15:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:09 ] training: epoch: 19, loss: 5.0360, top1: 30.81%, lr: 0.001000, obj_loss: 0.7112, verb_loss:1.6424,l1_loss:0.0077, obj_acc:70.4225%, verb_acc:39.2606%
+[ 2025-04-15 15:09 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:12 ] training: epoch: 20, loss: 5.0209, top1: 29.40%, lr: 0.001000, obj_loss: 0.6915, verb_loss:1.6642,l1_loss:0.0079, obj_acc:71.6549%, verb_acc:35.5634%
+[ 2025-04-15 15:13 ] evaluating: loss: 4.8548, top1: 33.61%, best_acc: 34.43%,obj_loss: 0.6311,verb_loss:1.6023,l1_loss:0.0064,obj_acc:78.6885%, verb_acc:44.2623%
+[ 2025-04-15 15:13 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:17 ] training: epoch: 21, loss: 4.9077, top1: 33.27%, lr: 0.001000, obj_loss: 0.6731, verb_loss:1.6232,l1_loss:0.0079, obj_acc:73.0634%, verb_acc:38.5563%
+[ 2025-04-15 15:17 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:20 ] training: epoch: 22, loss: 5.0293, top1: 31.34%, lr: 0.001000, obj_loss: 0.6872, verb_loss:1.6793,l1_loss:0.0079, obj_acc:70.4225%, verb_acc:35.2113%
+[ 2025-04-15 15:22 ] evaluating: loss: 4.8781, top1: 33.61%, best_acc: 34.43%,obj_loss: 0.7958,verb_loss:1.4990,l1_loss:0.0068,obj_acc:67.2131%, verb_acc:45.0820%
+[ 2025-04-15 15:22 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:25 ] training: epoch: 23, loss: 4.7065, top1: 32.22%, lr: 0.001000, obj_loss: 0.6214, verb_loss:1.5632,l1_loss:0.0079, obj_acc:74.6479%, verb_acc:41.5493%
+[ 2025-04-15 15:25 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:28 ] training: epoch: 24, loss: 4.7414, top1: 33.27%, lr: 0.001000, obj_loss: 0.6417, verb_loss:1.5760,l1_loss:0.0082, obj_acc:74.1197%, verb_acc:36.9718%
+[ 2025-04-15 15:30 ] evaluating: loss: 4.2286, top1: 45.08%, best_acc: 45.08%,obj_loss: 0.5566,verb_loss:1.3711,l1_loss:0.0057,obj_acc:81.9672%, verb_acc:56.5574%
+[ 2025-04-15 15:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:34 ] training: epoch: 25, loss: 5.0868, top1: 30.11%, lr: 0.001000, obj_loss: 0.7873, verb_loss:1.5858,l1_loss:0.0085, obj_acc:70.2465%, verb_acc:39.4366%
+[ 2025-04-15 15:34 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:37 ] training: epoch: 26, loss: 5.0001, top1: 33.45%, lr: 0.001000, obj_loss: 0.7526, verb_loss:1.5809,l1_loss:0.0086, obj_acc:70.2465%, verb_acc:41.0211%
+[ 2025-04-15 15:39 ] evaluating: loss: 6.0550, top1: 26.23%, best_acc: 45.08%,obj_loss: 1.1721,verb_loss:1.6354,l1_loss:0.0087,obj_acc:64.7541%, verb_acc:43.4426%
+[ 2025-04-15 15:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-15 15:41 ] training: epoch: 27, loss: 5.2125, top1: 30.99%, lr: 0.001000, obj_loss: 0.8843, verb_loss:1.5512,l1_loss:0.0080, obj_acc:64.7887%, verb_acc:41.9014%
+[ 2025-04-15 15:41 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-16 09:36 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-16 09:36 ] Model load finished: model.ISTANet.Model
+[ 2025-04-16 09:36 ] Data load finished
+[ 2025-04-16 09:44 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-16 09:44 ] Model load finished: model.ISTANet.Model
+[ 2025-04-16 09:44 ] Data load finished
+[ 2025-04-16 09:48 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-16 09:48 ] Model load finished: model.ISTANet.Model
+[ 2025-04-16 09:48 ] Data load finished
+[ 2025-04-16 13:14 ] Load weights from D:/Downloads/exp1-新结构/h2o(5).pt
+[ 2025-04-16 13:14 ] Model load finished: model.ISTANet.Model
+[ 2025-04-16 13:14 ] Data load finished
+[ 2025-04-16 13:16 ] Load weights from D:/Downloads/exp1-新结构/h2o(5).pt
+[ 2025-04-16 13:16 ] Model load finished: model.ISTANet.Model
+[ 2025-04-16 13:16 ] Data load finished
+[ 2025-04-17 16:52 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-17 16:52 ] Model load finished: model.ISTANet.Model
+[ 2025-04-17 16:52 ] Data load finished
+[ 2025-04-17 16:52 ] Optimizer load finished: SGD
+[ 2025-04-17 16:52 ] action_loss_weight: 1.2
+[ 2025-04-17 16:52 ] base_lr: 0.01
+[ 2025-04-17 16:52 ] batch_size: 4
+[ 2025-04-17 16:52 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-17 16:52 ] cuda_visible_device: 0
+[ 2025-04-17 16:52 ] device: [0]
+[ 2025-04-17 16:52 ] eval_interval: 2
+[ 2025-04-17 16:52 ] feat_loss_weight: 1.2
+[ 2025-04-17 16:52 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-17 16:52 ] ignore_weights: []
+[ 2025-04-17 16:52 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-17 16:52 ] loss_args: {'smoothing': 0.05, 'temperature': 1.0}
+[ 2025-04-17 16:52 ] lr_decay_rate: 0.5
+[ 2025-04-17 16:52 ] model: model.ISTANet.Model
+[ 2025-04-17 16:52 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-17 16:52 ] nesterov: True
+[ 2025-04-17 16:52 ] noun_loss_weight: 1.5
+[ 2025-04-17 16:52 ] num_epoch: 200
+[ 2025-04-17 16:52 ] num_worker: 8
+[ 2025-04-17 16:52 ] optimizer: SGD
+[ 2025-04-17 16:52 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-17 16:52 ] print_log: True
+[ 2025-04-17 16:52 ] run_mode: train
+[ 2025-04-17 16:52 ] save_epoch: 80
+[ 2025-04-17 16:52 ] save_score: False
+[ 2025-04-17 16:52 ] seed: 1
+[ 2025-04-17 16:52 ] show_topk: [1, 5]
+[ 2025-04-17 16:52 ] start_epoch: 0
+[ 2025-04-17 16:52 ] step: [60, 100, 140, 180]
+[ 2025-04-17 16:52 ] test_batch_size: 4
+[ 2025-04-17 16:52 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-17 16:52 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-17 16:52 ] verb_loss_weight: 1
+[ 2025-04-17 16:52 ] warm_up_epoch: 10
+[ 2025-04-17 16:52 ] weight_decay: 0.0005
+[ 2025-04-17 16:52 ] weights: None
+[ 2025-04-17 16:52 ] work_dir: ./exp/h2o
+[ 2025-04-17 16:52 ] # Parameters: 34960087
+[ 2025-04-17 16:52 ] ###***************start training***************###
+[ 2025-04-17 16:52 ] adjust learning rate, using warm up, epoch: 10
+[ 2025-04-17 16:52 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-17 16:52 ] Model load finished: model.ISTANet.Model
+[ 2025-04-17 16:52 ] Data load finished
+[ 2025-04-17 16:52 ] Optimizer load finished: SGD
+[ 2025-04-17 16:52 ] action_loss_weight: 1.2
+[ 2025-04-17 16:52 ] base_lr: 0.01
+[ 2025-04-17 16:52 ] batch_size: 4
+[ 2025-04-17 16:52 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-17 16:52 ] cuda_visible_device: 0
+[ 2025-04-17 16:52 ] device: [0]
+[ 2025-04-17 16:52 ] eval_interval: 2
+[ 2025-04-17 16:52 ] feat_loss_weight: 1.2
+[ 2025-04-17 16:52 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-17 16:52 ] ignore_weights: []
+[ 2025-04-17 16:52 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-17 16:52 ] loss_args: {'smoothing': 0.05, 'temperature': 1.0}
+[ 2025-04-17 16:52 ] lr_decay_rate: 0.5
+[ 2025-04-17 16:52 ] model: model.ISTANet.Model
+[ 2025-04-17 16:52 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-17 16:52 ] nesterov: True
+[ 2025-04-17 16:52 ] noun_loss_weight: 1.5
+[ 2025-04-17 16:52 ] num_epoch: 200
+[ 2025-04-17 16:52 ] num_worker: 8
+[ 2025-04-17 16:52 ] optimizer: SGD
+[ 2025-04-17 16:52 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-17 16:52 ] print_log: True
+[ 2025-04-17 16:52 ] run_mode: train
+[ 2025-04-17 16:52 ] save_epoch: 80
+[ 2025-04-17 16:52 ] save_score: False
+[ 2025-04-17 16:52 ] seed: 1
+[ 2025-04-17 16:52 ] show_topk: [1, 5]
+[ 2025-04-17 16:52 ] start_epoch: 0
+[ 2025-04-17 16:52 ] step: [60, 100, 140, 180]
+[ 2025-04-17 16:52 ] test_batch_size: 4
+[ 2025-04-17 16:52 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-17 16:52 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-17 16:52 ] verb_loss_weight: 1
+[ 2025-04-17 16:52 ] warm_up_epoch: 10
+[ 2025-04-17 16:52 ] weight_decay: 0.0005
+[ 2025-04-17 16:52 ] weights: None
+[ 2025-04-17 16:52 ] work_dir: ./exp/h2o
+[ 2025-04-17 16:52 ] # Parameters: 37062871
+[ 2025-04-17 16:52 ] ###***************start training***************###
+[ 2025-04-17 16:52 ] adjust learning rate, using warm up, epoch: 10
+[ 2025-04-19 12:32 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:32 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:32 ] Data load finished
+[ 2025-04-19 12:36 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:36 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:36 ] Data load finished
+[ 2025-04-19 12:38 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:38 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:38 ] Data load finished
+[ 2025-04-19 12:39 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:39 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:39 ] Data load finished
+[ 2025-04-19 12:45 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-19 12:45 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:45 ] Data load finished
+[ 2025-04-19 12:47 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:48 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:48 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:48 ] Data load finished
+[ 2025-04-19 12:56 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:56 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:56 ] Data load finished
+[ 2025-04-19 12:56 ] Load weights from D:/Downloads/exp3/h2o.pt
+[ 2025-04-19 12:56 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 12:56 ] Data load finished
+[ 2025-04-19 13:07 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-19 13:07 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 13:07 ] Data load finished
+[ 2025-04-19 13:54 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-19 13:54 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 13:54 ] Data load finished
+[ 2025-04-19 21:55 ] Load weights from D:/Downloads/exp4/h2o.pt
+[ 2025-04-19 21:55 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 21:55 ] Data load finished
+[ 2025-04-19 21:57 ] Load weights from D:/Downloads/exp4/h2o.pt
+[ 2025-04-19 21:57 ] Model load finished: model.ISTANet.Model
+[ 2025-04-19 21:57 ] Data load finished
+[ 2025-04-20 15:37 ] Load weights from D:/Downloads/exp5/h2o.pt
+[ 2025-04-20 15:37 ] Model load finished: model.ISTANet.Model
+[ 2025-04-20 15:37 ] Data load finished
+[ 2025-04-20 15:37 ] Load weights from D:/Downloads/exp5/h2o.pt
+[ 2025-04-20 15:37 ] Model load finished: model.ISTANet.Model
+[ 2025-04-20 15:37 ] Data load finished
+[ 2025-04-20 15:39 ] Load weights from D:/Downloads/exp5/h2o.pt
+[ 2025-04-20 15:39 ] Model load finished: model.ISTANet.Model
+[ 2025-04-20 15:39 ] Data load finished
+[ 2025-04-20 15:40 ] Load weights from D:/Downloads/exp5/h2o.pt
+[ 2025-04-20 15:40 ] Model load finished: model.ISTANet.Model
+[ 2025-04-20 15:40 ] Data load finished
+[ 2025-04-20 15:49 ] Load weights from D:/Downloads/exp5/h2o.pt
+[ 2025-04-20 15:49 ] Model load finished: model.ISTANet.Model
+[ 2025-04-20 15:49 ] Data load finished
+[ 2025-04-20 16:52 ] Load weights from D:/Downloads/exp2/h2o.pt
+[ 2025-04-20 16:52 ] Model load finished: model.ISTANet.Model
+[ 2025-04-20 16:52 ] Data load finished
+[ 2025-04-21 10:26 ] Load weights from D:/Downloads/h2o.pt
+[ 2025-04-21 10:26 ] Model load finished: model.ISTANet.Model
+[ 2025-04-21 10:26 ] Data load finished
+[ 2025-04-21 10:27 ] Load weights from D:/Downloads/h2o.pt
+[ 2025-04-21 10:27 ] Model load finished: model.ISTANet.Model
+[ 2025-04-21 10:27 ] Data load finished
+[ 2025-04-21 10:28 ] Load weights from D:/Downloads/h2o.pt
+[ 2025-04-21 10:28 ] Model load finished: model.ISTANet.Model
+[ 2025-04-21 10:28 ] Data load finished
+[ 2025-04-21 10:34 ] Load weights from D:/Downloads/h2o.pt
+[ 2025-04-21 10:34 ] Model load finished: model.ISTANet.Model
+[ 2025-04-21 10:34 ] Data load finished
+[ 2025-04-21 10:40 ] Load weights from D:/Downloads/h2o.pt
+[ 2025-04-21 10:40 ] Model load finished: model.ISTANet.Model
+[ 2025-04-21 10:40 ] Data load finished
+[ 2025-04-21 14:42 ] Load weights from D:/Downloads/h2o.pt
+[ 2025-04-21 14:42 ] Model load finished: model.ISTANet.Model
+[ 2025-04-21 14:42 ] Data load finished
+[ 2025-04-22 10:24 ] Load weights from D:/Downloads/4heads/h2o.pt
+[ 2025-04-22 10:24 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 10:24 ] Data load finished
+[ 2025-04-22 10:46 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-22 10:46 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 10:46 ] Data load finished
+[ 2025-04-22 10:46 ] Optimizer load finished: SGD
+[ 2025-04-22 10:46 ] action_loss_weight: 1.2
+[ 2025-04-22 10:46 ] base_lr: 0.01
+[ 2025-04-22 10:46 ] batch_size: 4
+[ 2025-04-22 10:46 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-22 10:46 ] cuda_visible_device: 0
+[ 2025-04-22 10:46 ] device: [0]
+[ 2025-04-22 10:46 ] eval_interval: 1
+[ 2025-04-22 10:46 ] feat_loss_weight: 2
+[ 2025-04-22 10:46 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-22 10:46 ] ignore_weights: []
+[ 2025-04-22 10:46 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-22 10:46 ] loss_args: {'smoothing': 0.05, 'temperature': 1.0}
+[ 2025-04-22 10:46 ] lr_decay_rate: 0.5
+[ 2025-04-22 10:46 ] model: model.ISTANet.Model
+[ 2025-04-22 10:46 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-22 10:46 ] nesterov: True
+[ 2025-04-22 10:46 ] noun_loss_weight: 1.5
+[ 2025-04-22 10:46 ] num_epoch: 120
+[ 2025-04-22 10:46 ] num_worker: 8
+[ 2025-04-22 10:46 ] optimizer: SGD
+[ 2025-04-22 10:46 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-22 10:46 ] print_log: True
+[ 2025-04-22 10:46 ] run_mode: train
+[ 2025-04-22 10:46 ] save_epoch: 80
+[ 2025-04-22 10:46 ] save_score: False
+[ 2025-04-22 10:46 ] seed: 1
+[ 2025-04-22 10:46 ] show_topk: [1, 5]
+[ 2025-04-22 10:46 ] start_epoch: 0
+[ 2025-04-22 10:46 ] step: [20, 40, 60, 80, 100]
+[ 2025-04-22 10:46 ] test_batch_size: 4
+[ 2025-04-22 10:46 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-22 10:46 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-22 10:46 ] verb_loss_weight: 1.2
+[ 2025-04-22 10:46 ] warm_up_epoch: 5
+[ 2025-04-22 10:46 ] weight_decay: 0.001
+[ 2025-04-22 10:46 ] weights: None
+[ 2025-04-22 10:46 ] work_dir: ./exp/h2o
+[ 2025-04-22 10:46 ] # Parameters: 34960087
+[ 2025-04-22 10:46 ] ###***************start training***************###
+[ 2025-04-22 10:46 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 10:48 ] Loading ResNet50 weights and modifying its structure.
+[ 2025-04-22 10:48 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 10:48 ] Data load finished
+[ 2025-04-22 10:48 ] Optimizer load finished: SGD
+[ 2025-04-22 10:48 ] action_loss_weight: 1.2
+[ 2025-04-22 10:48 ] base_lr: 0.01
+[ 2025-04-22 10:48 ] batch_size: 4
+[ 2025-04-22 10:48 ] config: ./config/h2o/h2o.yaml
+[ 2025-04-22 10:48 ] cuda_visible_device: 0
+[ 2025-04-22 10:48 ] device: [0]
+[ 2025-04-22 10:48 ] eval_interval: 1
+[ 2025-04-22 10:48 ] feat_loss_weight: 2
+[ 2025-04-22 10:48 ] feeder: feeders.feeder_h2o.Feeder
+[ 2025-04-22 10:48 ] ignore_weights: []
+[ 2025-04-22 10:48 ] loss: LabelSmoothingCrossEntropy
+[ 2025-04-22 10:48 ] loss_args: {'smoothing': 0.05, 'temperature': 1.0}
+[ 2025-04-22 10:48 ] lr_decay_rate: 0.5
+[ 2025-04-22 10:48 ] model: model.ISTANet.Model
+[ 2025-04-22 10:48 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_objs': 8, 'num_verbs': 11, 'num_heads': 4, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2025-04-22 10:48 ] nesterov: True
+[ 2025-04-22 10:48 ] noun_loss_weight: 1.5
+[ 2025-04-22 10:48 ] num_epoch: 120
+[ 2025-04-22 10:48 ] num_worker: 8
+[ 2025-04-22 10:48 ] optimizer: SGD
+[ 2025-04-22 10:48 ] optimizer_betas: [0.9, 0.999]
+[ 2025-04-22 10:48 ] print_log: True
+[ 2025-04-22 10:48 ] run_mode: train
+[ 2025-04-22 10:48 ] save_epoch: 80
+[ 2025-04-22 10:48 ] save_score: False
+[ 2025-04-22 10:48 ] seed: 1
+[ 2025-04-22 10:48 ] show_topk: [1, 5]
+[ 2025-04-22 10:48 ] start_epoch: 0
+[ 2025-04-22 10:48 ] step: [20, 40, 60, 80, 100]
+[ 2025-04-22 10:48 ] test_batch_size: 4
+[ 2025-04-22 10:48 ] test_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False, 'use_rgb': True}
+[ 2025-04-22 10:48 ] train_feeder_args: {'data_path': 'data/h2o/h2o_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False, 'use_rgb': True}
+[ 2025-04-22 10:48 ] verb_loss_weight: 1.2
+[ 2025-04-22 10:48 ] warm_up_epoch: 5
+[ 2025-04-22 10:48 ] weight_decay: 0.0001
+[ 2025-04-22 10:48 ] weights: None
+[ 2025-04-22 10:48 ] work_dir: ./exp/h2o
+[ 2025-04-22 10:48 ] # Parameters: 34960087
+[ 2025-04-22 10:48 ] ###***************start training***************###
+[ 2025-04-22 10:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 10:51 ] training: epoch: 1, loss: 12.0576, top1: 1.23%, lr: 0.002000, obj_loss: 2.5422, verb_loss:2.4456,l1_loss:0.1736, obj_acc:14.0845%, verb_acc:22.0070%
+[ 2025-04-22 10:52 ] evaluating: loss: 12.5266, top1: 2.46%, best_acc: 2.46%,obj_loss: 3.0304,verb_loss:2.5052,l1_loss:0.0292,obj_acc:13.9344%, verb_acc:10.6557%
+[ 2025-04-22 10:52 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 10:54 ] training: epoch: 2, loss: 10.8492, top1: 3.70%, lr: 0.004000, obj_loss: 2.2767, verb_loss:2.2562,l1_loss:0.0776, obj_acc:12.3239%, verb_acc:22.5352%
+[ 2025-04-22 10:55 ] evaluating: loss: 9.9612, top1: 4.92%, best_acc: 4.92%,obj_loss: 2.0323,verb_loss:2.1601,l1_loss:0.0131,obj_acc:19.6721%, verb_acc:24.5902%
+[ 2025-04-22 10:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 10:57 ] training: epoch: 3, loss: 10.1789, top1: 1.76%, lr: 0.006000, obj_loss: 2.1124, verb_loss:2.1389,l1_loss:0.0501, obj_acc:14.4366%, verb_acc:23.5915%
+[ 2025-04-22 10:58 ] evaluating: loss: 9.4852, top1: 4.92%, best_acc: 4.92%,obj_loss: 2.0118,verb_loss:1.8806,l1_loss:0.0118,obj_acc:20.4918%, verb_acc:35.2459%
+[ 2025-04-22 10:58 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:00 ] training: epoch: 4, loss: 9.6278, top1: 5.63%, lr: 0.008000, obj_loss: 1.9114, verb_loss:2.0775,l1_loss:0.0384, obj_acc:22.7113%, verb_acc:23.4155%
+[ 2025-04-22 11:01 ] evaluating: loss: 9.1313, top1: 7.38%, best_acc: 7.38%,obj_loss: 1.8371,verb_loss:1.9989,l1_loss:0.0112,obj_acc:32.7869%, verb_acc:27.8689%
+[ 2025-04-22 11:01 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:03 ] training: epoch: 5, loss: 8.4895, top1: 8.80%, lr: 0.010000, obj_loss: 1.4679, verb_loss:2.0764,l1_loss:0.0317, obj_acc:37.8521%, verb_acc:22.0070%
+[ 2025-04-22 11:04 ] evaluating: loss: 7.6723, top1: 11.48%, best_acc: 11.48%,obj_loss: 1.3285,verb_loss:1.8517,l1_loss:0.0116,obj_acc:45.9016%, verb_acc:29.5082%
+[ 2025-04-22 11:04 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:06 ] training: epoch: 6, loss: 7.7438, top1: 14.61%, lr: 0.010000, obj_loss: 1.3241, verb_loss:1.9146,l1_loss:0.0263, obj_acc:40.1408%, verb_acc:26.7606%
+[ 2025-04-22 11:07 ] evaluating: loss: 7.9061, top1: 19.67%, best_acc: 19.67%,obj_loss: 1.5447,verb_loss:1.8066,l1_loss:0.0103,obj_acc:44.2623%, verb_acc:30.3279%
+[ 2025-04-22 11:07 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:09 ] training: epoch: 7, loss: 7.3331, top1: 18.49%, lr: 0.010000, obj_loss: 1.2631, verb_loss:1.7941,l1_loss:0.0225, obj_acc:44.3662%, verb_acc:28.8732%
+[ 2025-04-22 11:10 ] evaluating: loss: 6.8653, top1: 16.39%, best_acc: 19.67%,obj_loss: 1.2208,verb_loss:1.6616,l1_loss:0.0101,obj_acc:38.5246%, verb_acc:30.3279%
+[ 2025-04-22 11:10 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:12 ] training: epoch: 8, loss: 7.0445, top1: 19.01%, lr: 0.010000, obj_loss: 1.1819, verb_loss:1.7471,l1_loss:0.0199, obj_acc:50.5282%, verb_acc:31.8662%
+[ 2025-04-22 11:13 ] evaluating: loss: 7.2413, top1: 17.21%, best_acc: 19.67%,obj_loss: 1.4010,verb_loss:1.6308,l1_loss:0.0098,obj_acc:40.1639%, verb_acc:44.2623%
+[ 2025-04-22 11:13 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:15 ] training: epoch: 9, loss: 6.8177, top1: 21.30%, lr: 0.010000, obj_loss: 1.1786, verb_loss:1.6389,l1_loss:0.0181, obj_acc:49.8239%, verb_acc:41.9014%
+[ 2025-04-22 11:16 ] evaluating: loss: 7.1133, top1: 14.75%, best_acc: 19.67%,obj_loss: 1.3398,verb_loss:1.6828,l1_loss:0.0100,obj_acc:45.9016%, verb_acc:32.7869%
+[ 2025-04-22 11:16 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:18 ] training: epoch: 10, loss: 6.5092, top1: 25.18%, lr: 0.010000, obj_loss: 1.0891, verb_loss:1.5976,l1_loss:0.0163, obj_acc:50.8803%, verb_acc:43.3099%
+[ 2025-04-22 11:19 ] evaluating: loss: 6.3506, top1: 27.87%, best_acc: 27.87%,obj_loss: 1.2558,verb_loss:1.3761,l1_loss:0.0096,obj_acc:45.9016%, verb_acc:55.7377%
+[ 2025-04-22 11:19 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:21 ] training: epoch: 11, loss: 6.2327, top1: 26.58%, lr: 0.010000, obj_loss: 1.0280, verb_loss:1.5203,l1_loss:0.0151, obj_acc:54.4014%, verb_acc:46.1268%
+[ 2025-04-22 11:22 ] evaluating: loss: 5.6546, top1: 42.62%, best_acc: 42.62%,obj_loss: 1.1263,verb_loss:1.2043,l1_loss:0.0096,obj_acc:48.3607%, verb_acc:63.1148%
+[ 2025-04-22 11:22 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:24 ] training: epoch: 12, loss: 5.9635, top1: 33.27%, lr: 0.010000, obj_loss: 0.9625, verb_loss:1.4838,l1_loss:0.0141, obj_acc:60.5634%, verb_acc:49.6479%
+[ 2025-04-22 11:25 ] evaluating: loss: 5.7408, top1: 31.97%, best_acc: 42.62%,obj_loss: 1.2387,verb_loss:1.1366,l1_loss:0.0101,obj_acc:53.2787%, verb_acc:66.3934%
+[ 2025-04-22 11:25 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:27 ] training: epoch: 13, loss: 5.6999, top1: 36.09%, lr: 0.010000, obj_loss: 0.9532, verb_loss:1.3976,l1_loss:0.0139, obj_acc:59.3310%, verb_acc:53.3451%
+[ 2025-04-22 11:28 ] evaluating: loss: 5.4449, top1: 34.43%, best_acc: 42.62%,obj_loss: 1.1352,verb_loss:1.1157,l1_loss:0.0107,obj_acc:53.2787%, verb_acc:69.6721%
+[ 2025-04-22 11:28 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:30 ] training: epoch: 14, loss: 5.6091, top1: 38.91%, lr: 0.010000, obj_loss: 0.9448, verb_loss:1.3444,l1_loss:0.0139, obj_acc:59.3310%, verb_acc:56.6901%
+[ 2025-04-22 11:31 ] evaluating: loss: 5.1194, top1: 42.62%, best_acc: 42.62%,obj_loss: 0.9591,verb_loss:1.1469,l1_loss:0.0120,obj_acc:58.1967%, verb_acc:68.0328%
+[ 2025-04-22 11:31 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:33 ] training: epoch: 15, loss: 5.9739, top1: 35.21%, lr: 0.010000, obj_loss: 0.9917, verb_loss:1.4699,l1_loss:0.0125, obj_acc:55.9859%, verb_acc:52.1127%
+[ 2025-04-22 11:33 ] evaluating: loss: 6.6327, top1: 31.97%, best_acc: 42.62%,obj_loss: 1.2698,verb_loss:1.5870,l1_loss:0.0091,obj_acc:43.4426%, verb_acc:54.0984%
+[ 2025-04-22 11:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:36 ] training: epoch: 16, loss: 6.2789, top1: 31.16%, lr: 0.010000, obj_loss: 1.0745, verb_loss:1.5551,l1_loss:0.0114, obj_acc:54.5775%, verb_acc:45.7746%
+[ 2025-04-22 11:36 ] evaluating: loss: 6.4380, top1: 29.51%, best_acc: 42.62%,obj_loss: 1.2442,verb_loss:1.4543,l1_loss:0.0091,obj_acc:47.5410%, verb_acc:52.4590%
+[ 2025-04-22 11:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:39 ] training: epoch: 17, loss: 6.5174, top1: 29.93%, lr: 0.010000, obj_loss: 1.0966, verb_loss:1.6340,l1_loss:0.0109, obj_acc:52.6408%, verb_acc:45.4225%
+[ 2025-04-22 11:39 ] evaluating: loss: 6.7348, top1: 26.23%, best_acc: 42.62%,obj_loss: 1.3014,verb_loss:1.5425,l1_loss:0.0092,obj_acc:44.2623%, verb_acc:41.8033%
+[ 2025-04-22 11:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:42 ] training: epoch: 18, loss: 6.0727, top1: 29.58%, lr: 0.010000, obj_loss: 0.9924, verb_loss:1.5171,l1_loss:0.0104, obj_acc:59.5070%, verb_acc:42.6056%
+[ 2025-04-22 11:42 ] evaluating: loss: 7.4746, top1: 25.41%, best_acc: 42.62%,obj_loss: 1.6258,verb_loss:1.6236,l1_loss:0.0092,obj_acc:40.9836%, verb_acc:45.9016%
+[ 2025-04-22 11:42 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:45 ] training: epoch: 19, loss: 5.5287, top1: 37.68%, lr: 0.010000, obj_loss: 0.9192, verb_loss:1.3583,l1_loss:0.0102, obj_acc:58.6268%, verb_acc:54.0493%
+[ 2025-04-22 11:45 ] evaluating: loss: 4.9214, top1: 46.72%, best_acc: 46.72%,obj_loss: 0.9775,verb_loss:1.0187,l1_loss:0.0095,obj_acc:62.2951%, verb_acc:66.3934%
+[ 2025-04-22 11:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:47 ] training: epoch: 20, loss: 5.1766, top1: 42.96%, lr: 0.010000, obj_loss: 0.8690, verb_loss:1.2326,l1_loss:0.0107, obj_acc:62.6761%, verb_acc:60.9155%
+[ 2025-04-22 11:48 ] evaluating: loss: 5.4123, top1: 40.16%, best_acc: 46.72%,obj_loss: 1.1713,verb_loss:1.1281,l1_loss:0.0111,obj_acc:52.4590%, verb_acc:63.9344%
+[ 2025-04-22 11:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:50 ] training: epoch: 21, loss: 6.4184, top1: 29.58%, lr: 0.005000, obj_loss: 1.1007, verb_loss:1.5447,l1_loss:0.0118, obj_acc:55.8099%, verb_acc:50.0000%
+[ 2025-04-22 11:51 ] evaluating: loss: 6.7967, top1: 28.69%, best_acc: 46.72%,obj_loss: 1.1688,verb_loss:1.6335,l1_loss:0.0114,obj_acc:47.5410%, verb_acc:50.0000%
+[ 2025-04-22 11:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:53 ] training: epoch: 22, loss: 5.8855, top1: 34.33%, lr: 0.005000, obj_loss: 0.9027, verb_loss:1.4989,l1_loss:0.0122, obj_acc:62.1479%, verb_acc:50.7042%
+[ 2025-04-22 11:54 ] evaluating: loss: 5.1406, top1: 45.08%, best_acc: 46.72%,obj_loss: 0.8376,verb_loss:1.2387,l1_loss:0.0116,obj_acc:58.1967%, verb_acc:62.2951%
+[ 2025-04-22 11:54 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:56 ] training: epoch: 23, loss: 5.0809, top1: 44.54%, lr: 0.005000, obj_loss: 0.7384, verb_loss:1.3140,l1_loss:0.0120, obj_acc:68.1338%, verb_acc:59.8592%
+[ 2025-04-22 11:57 ] evaluating: loss: 4.1149, top1: 54.92%, best_acc: 54.92%,obj_loss: 0.6931,verb_loss:0.9336,l1_loss:0.0116,obj_acc:69.6721%, verb_acc:74.5902%
+[ 2025-04-22 11:57 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 11:59 ] training: epoch: 24, loss: 4.4106, top1: 51.94%, lr: 0.005000, obj_loss: 0.6418, verb_loss:1.1309,l1_loss:0.0118, obj_acc:70.5986%, verb_acc:67.0775%
+[ 2025-04-22 11:59 ] evaluating: loss: 4.8712, top1: 45.08%, best_acc: 54.92%,obj_loss: 0.9531,verb_loss:1.0126,l1_loss:0.0139,obj_acc:61.4754%, verb_acc:68.8525%
+[ 2025-04-22 11:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:02 ] training: epoch: 25, loss: 4.3623, top1: 52.11%, lr: 0.005000, obj_loss: 0.6184, verb_loss:1.1257,l1_loss:0.0116, obj_acc:73.7676%, verb_acc:67.0775%
+[ 2025-04-22 12:02 ] evaluating: loss: 3.8916, top1: 57.38%, best_acc: 57.38%,obj_loss: 0.6577,verb_loss:0.8889,l1_loss:0.0110,obj_acc:74.5902%, verb_acc:77.0492%
+[ 2025-04-22 12:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:05 ] training: epoch: 26, loss: 3.8682, top1: 59.86%, lr: 0.005000, obj_loss: 0.5246, verb_loss:1.0051,l1_loss:0.0116, obj_acc:75.8803%, verb_acc:71.6549%
+[ 2025-04-22 12:05 ] evaluating: loss: 3.8018, top1: 62.30%, best_acc: 62.30%,obj_loss: 0.5594,verb_loss:0.9274,l1_loss:0.0107,obj_acc:75.4098%, verb_acc:78.6885%
+[ 2025-04-22 12:05 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:08 ] training: epoch: 27, loss: 3.9625, top1: 59.15%, lr: 0.005000, obj_loss: 0.5296, verb_loss:1.0445,l1_loss:0.0116, obj_acc:79.5775%, verb_acc:70.2465%
+[ 2025-04-22 12:08 ] evaluating: loss: 3.4343, top1: 62.30%, best_acc: 62.30%,obj_loss: 0.5365,verb_loss:0.7949,l1_loss:0.0116,obj_acc:80.3279%, verb_acc:81.9672%
+[ 2025-04-22 12:08 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:10 ] training: epoch: 28, loss: 3.8031, top1: 59.68%, lr: 0.005000, obj_loss: 0.4864, verb_loss:1.0245,l1_loss:0.0117, obj_acc:80.1056%, verb_acc:68.6620%
+[ 2025-04-22 12:11 ] evaluating: loss: 3.5447, top1: 63.11%, best_acc: 63.11%,obj_loss: 0.5685,verb_loss:0.7981,l1_loss:0.0112,obj_acc:74.5902%, verb_acc:78.6885%
+[ 2025-04-22 12:11 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:13 ] training: epoch: 29, loss: 3.9268, top1: 56.69%, lr: 0.005000, obj_loss: 0.5093, verb_loss:1.0415,l1_loss:0.0116, obj_acc:79.7535%, verb_acc:69.7183%
+[ 2025-04-22 12:14 ] evaluating: loss: 3.5277, top1: 62.30%, best_acc: 63.11%,obj_loss: 0.5274,verb_loss:0.8518,l1_loss:0.0108,obj_acc:81.9672%, verb_acc:77.8689%
+[ 2025-04-22 12:14 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:16 ] training: epoch: 30, loss: 3.7343, top1: 60.56%, lr: 0.005000, obj_loss: 0.4874, verb_loss:0.9906,l1_loss:0.0113, obj_acc:79.5775%, verb_acc:70.9507%
+[ 2025-04-22 12:17 ] evaluating: loss: 3.3492, top1: 66.39%, best_acc: 66.39%,obj_loss: 0.5377,verb_loss:0.7364,l1_loss:0.0111,obj_acc:79.5082%, verb_acc:81.1475%
+[ 2025-04-22 12:17 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:19 ] training: epoch: 31, loss: 3.5100, top1: 66.20%, lr: 0.005000, obj_loss: 0.4407, verb_loss:0.9416,l1_loss:0.0111, obj_acc:83.4507%, verb_acc:73.7676%
+[ 2025-04-22 12:20 ] evaluating: loss: 3.0903, top1: 70.49%, best_acc: 70.49%,obj_loss: 0.4581,verb_loss:0.7063,l1_loss:0.0105,obj_acc:83.6066%, verb_acc:81.1475%
+[ 2025-04-22 12:20 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:23 ] training: epoch: 32, loss: 3.3443, top1: 65.49%, lr: 0.005000, obj_loss: 0.3596, verb_loss:0.9453,l1_loss:0.0108, obj_acc:84.8592%, verb_acc:73.5915%
+[ 2025-04-22 12:24 ] evaluating: loss: 2.8862, top1: 72.13%, best_acc: 72.13%,obj_loss: 0.3300,verb_loss:0.7458,l1_loss:0.0100,obj_acc:85.2459%, verb_acc:81.9672%
+[ 2025-04-22 12:24 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:26 ] training: epoch: 33, loss: 3.1671, top1: 70.07%, lr: 0.005000, obj_loss: 0.3205, verb_loss:0.9150,l1_loss:0.0107, obj_acc:87.3239%, verb_acc:75.1761%
+[ 2025-04-22 12:27 ] evaluating: loss: 3.0150, top1: 73.77%, best_acc: 73.77%,obj_loss: 0.4496,verb_loss:0.7281,l1_loss:0.0100,obj_acc:80.3279%, verb_acc:85.2459%
+[ 2025-04-22 12:27 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:29 ] training: epoch: 34, loss: 3.1901, top1: 69.89%, lr: 0.005000, obj_loss: 0.3683, verb_loss:0.9002,l1_loss:0.0101, obj_acc:84.6831%, verb_acc:76.7606%
+[ 2025-04-22 12:30 ] evaluating: loss: 2.7970, top1: 75.41%, best_acc: 75.41%,obj_loss: 0.3312,verb_loss:0.7200,l1_loss:0.0095,obj_acc:84.4262%, verb_acc:83.6066%
+[ 2025-04-22 12:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:32 ] training: epoch: 35, loss: 3.2168, top1: 67.96%, lr: 0.005000, obj_loss: 0.3640, verb_loss:0.8910,l1_loss:0.0098, obj_acc:85.2113%, verb_acc:74.8239%
+[ 2025-04-22 12:33 ] evaluating: loss: 3.2124, top1: 69.67%, best_acc: 75.41%,obj_loss: 0.3552,verb_loss:0.8564,l1_loss:0.0092,obj_acc:81.1475%, verb_acc:77.8689%
+[ 2025-04-22 12:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:35 ] training: epoch: 36, loss: 3.2766, top1: 67.08%, lr: 0.005000, obj_loss: 0.3276, verb_loss:0.9593,l1_loss:0.0098, obj_acc:86.6197%, verb_acc:73.4155%
+[ 2025-04-22 12:36 ] evaluating: loss: 2.8869, top1: 73.77%, best_acc: 75.41%,obj_loss: 0.3400,verb_loss:0.7703,l1_loss:0.0094,obj_acc:84.4262%, verb_acc:80.3279%
+[ 2025-04-22 12:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:38 ] training: epoch: 37, loss: 2.8990, top1: 72.36%, lr: 0.005000, obj_loss: 0.3117, verb_loss:0.8178,l1_loss:0.0097, obj_acc:87.6761%, verb_acc:79.5775%
+[ 2025-04-22 12:39 ] evaluating: loss: 2.7611, top1: 77.05%, best_acc: 77.05%,obj_loss: 0.3525,verb_loss:0.6956,l1_loss:0.0092,obj_acc:86.8852%, verb_acc:87.7049%
+[ 2025-04-22 12:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:41 ] training: epoch: 38, loss: 2.6817, top1: 74.65%, lr: 0.005000, obj_loss: 0.2758, verb_loss:0.7600,l1_loss:0.0098, obj_acc:88.9085%, verb_acc:82.3944%
+[ 2025-04-22 12:42 ] evaluating: loss: 3.4977, top1: 70.49%, best_acc: 77.05%,obj_loss: 0.6017,verb_loss:0.7762,l1_loss:0.0092,obj_acc:84.4262%, verb_acc:81.9672%
+[ 2025-04-22 12:42 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:44 ] training: epoch: 39, loss: 2.6494, top1: 78.35%, lr: 0.005000, obj_loss: 0.2683, verb_loss:0.7576,l1_loss:0.0095, obj_acc:89.7887%, verb_acc:83.4507%
+[ 2025-04-22 12:44 ] evaluating: loss: 2.4809, top1: 77.05%, best_acc: 77.05%,obj_loss: 0.2679,verb_loss:0.6453,l1_loss:0.0086,obj_acc:89.3443%, verb_acc:89.3443%
+[ 2025-04-22 12:44 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:47 ] training: epoch: 40, loss: 2.4741, top1: 78.52%, lr: 0.005000, obj_loss: 0.1869, verb_loss:0.7570,l1_loss:0.0094, obj_acc:92.4296%, verb_acc:82.5704%
+[ 2025-04-22 12:47 ] evaluating: loss: 2.5170, top1: 77.05%, best_acc: 77.05%,obj_loss: 0.2879,verb_loss:0.6451,l1_loss:0.0083,obj_acc:82.7869%, verb_acc:87.7049%
+[ 2025-04-22 12:47 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:50 ] training: epoch: 41, loss: 2.3297, top1: 81.51%, lr: 0.002500, obj_loss: 0.1735, verb_loss:0.7097,l1_loss:0.0090, obj_acc:93.8380%, verb_acc:85.0352%
+[ 2025-04-22 12:50 ] evaluating: loss: 2.4436, top1: 78.69%, best_acc: 78.69%,obj_loss: 0.2277,verb_loss:0.6605,l1_loss:0.0085,obj_acc:88.5246%, verb_acc:86.0656%
+[ 2025-04-22 12:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:52 ] training: epoch: 42, loss: 2.3935, top1: 80.11%, lr: 0.002500, obj_loss: 0.1852, verb_loss:0.7210,l1_loss:0.0092, obj_acc:93.4859%, verb_acc:84.1549%
+[ 2025-04-22 12:53 ] evaluating: loss: 2.2555, top1: 81.15%, best_acc: 81.15%,obj_loss: 0.2010,verb_loss:0.5981,l1_loss:0.0089,obj_acc:89.3443%, verb_acc:90.9836%
+[ 2025-04-22 12:53 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:55 ] training: epoch: 43, loss: 2.2101, top1: 83.45%, lr: 0.002500, obj_loss: 0.1138, verb_loss:0.7137,l1_loss:0.0092, obj_acc:96.3028%, verb_acc:83.4507%
+[ 2025-04-22 12:56 ] evaluating: loss: 2.2897, top1: 80.33%, best_acc: 81.15%,obj_loss: 0.1888,verb_loss:0.6278,l1_loss:0.0091,obj_acc:93.4426%, verb_acc:90.9836%
+[ 2025-04-22 12:56 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 12:58 ] training: epoch: 44, loss: 2.1884, top1: 83.98%, lr: 0.002500, obj_loss: 0.1208, verb_loss:0.6897,l1_loss:0.0092, obj_acc:96.3028%, verb_acc:85.0352%
+[ 2025-04-22 12:59 ] evaluating: loss: 2.4841, top1: 80.33%, best_acc: 81.15%,obj_loss: 0.2942,verb_loss:0.6188,l1_loss:0.0087,obj_acc:91.8033%, verb_acc:89.3443%
+[ 2025-04-22 12:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:01 ] training: epoch: 45, loss: 2.1436, top1: 84.33%, lr: 0.002500, obj_loss: 0.1256, verb_loss:0.6734,l1_loss:0.0091, obj_acc:95.2465%, verb_acc:88.0282%
+[ 2025-04-22 13:02 ] evaluating: loss: 2.1522, top1: 83.61%, best_acc: 83.61%,obj_loss: 0.1610,verb_loss:0.5987,l1_loss:0.0086,obj_acc:91.8033%, verb_acc:89.3443%
+[ 2025-04-22 13:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:04 ] training: epoch: 46, loss: 2.0491, top1: 86.62%, lr: 0.002500, obj_loss: 0.1078, verb_loss:0.6543,l1_loss:0.0091, obj_acc:97.3592%, verb_acc:87.1479%
+[ 2025-04-22 13:04 ] evaluating: loss: 2.2908, top1: 80.33%, best_acc: 83.61%,obj_loss: 0.1839,verb_loss:0.6308,l1_loss:0.0082,obj_acc:93.4426%, verb_acc:90.1639%
+[ 2025-04-22 13:04 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:07 ] training: epoch: 47, loss: 2.0239, top1: 85.56%, lr: 0.002500, obj_loss: 0.0785, verb_loss:0.6653,l1_loss:0.0091, obj_acc:97.5352%, verb_acc:85.5634%
+[ 2025-04-22 13:07 ] evaluating: loss: 2.1796, top1: 85.25%, best_acc: 85.25%,obj_loss: 0.1681,verb_loss:0.6101,l1_loss:0.0082,obj_acc:93.4426%, verb_acc:89.3443%
+[ 2025-04-22 13:07 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:10 ] training: epoch: 48, loss: 2.0788, top1: 84.15%, lr: 0.002500, obj_loss: 0.1089, verb_loss:0.6640,l1_loss:0.0091, obj_acc:96.1268%, verb_acc:86.6197%
+[ 2025-04-22 13:10 ] evaluating: loss: 2.3530, top1: 84.43%, best_acc: 85.25%,obj_loss: 0.2208,verb_loss:0.6715,l1_loss:0.0082,obj_acc:92.6230%, verb_acc:87.7049%
+[ 2025-04-22 13:10 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:12 ] training: epoch: 49, loss: 2.0617, top1: 84.86%, lr: 0.002500, obj_loss: 0.0871, verb_loss:0.6799,l1_loss:0.0090, obj_acc:97.5352%, verb_acc:86.0915%
+[ 2025-04-22 13:13 ] evaluating: loss: 2.1213, top1: 85.25%, best_acc: 85.25%,obj_loss: 0.1328,verb_loss:0.6296,l1_loss:0.0085,obj_acc:95.0820%, verb_acc:90.9836%
+[ 2025-04-22 13:13 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:15 ] training: epoch: 50, loss: 1.9794, top1: 87.15%, lr: 0.002500, obj_loss: 0.0868, verb_loss:0.6407,l1_loss:0.0090, obj_acc:96.8310%, verb_acc:88.9085%
+[ 2025-04-22 13:16 ] evaluating: loss: 2.1491, top1: 83.61%, best_acc: 85.25%,obj_loss: 0.1375,verb_loss:0.6251,l1_loss:0.0083,obj_acc:94.2623%, verb_acc:90.1639%
+[ 2025-04-22 13:16 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:18 ] training: epoch: 51, loss: 1.9738, top1: 88.38%, lr: 0.002500, obj_loss: 0.0997, verb_loss:0.6282,l1_loss:0.0091, obj_acc:96.8310%, verb_acc:88.9085%
+[ 2025-04-22 13:19 ] evaluating: loss: 2.1665, top1: 84.43%, best_acc: 85.25%,obj_loss: 0.1328,verb_loss:0.6309,l1_loss:0.0090,obj_acc:93.4426%, verb_acc:91.8033%
+[ 2025-04-22 13:19 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:21 ] training: epoch: 52, loss: 1.8781, top1: 88.73%, lr: 0.002500, obj_loss: 0.0887, verb_loss:0.5990,l1_loss:0.0093, obj_acc:97.1831%, verb_acc:90.3169%
+[ 2025-04-22 13:22 ] evaluating: loss: 2.2000, top1: 84.43%, best_acc: 85.25%,obj_loss: 0.1554,verb_loss:0.6385,l1_loss:0.0083,obj_acc:94.2623%, verb_acc:87.7049%
+[ 2025-04-22 13:22 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:24 ] training: epoch: 53, loss: 1.9045, top1: 89.08%, lr: 0.002500, obj_loss: 0.0813, verb_loss:0.6137,l1_loss:0.0091, obj_acc:97.1831%, verb_acc:89.6127%
+[ 2025-04-22 13:24 ] evaluating: loss: 2.2064, top1: 86.07%, best_acc: 86.07%,obj_loss: 0.1723,verb_loss:0.6225,l1_loss:0.0083,obj_acc:93.4426%, verb_acc:90.1639%
+[ 2025-04-22 13:24 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:27 ] training: epoch: 54, loss: 1.9091, top1: 90.14%, lr: 0.002500, obj_loss: 0.0887, verb_loss:0.6166,l1_loss:0.0092, obj_acc:97.5352%, verb_acc:89.2606%
+[ 2025-04-22 13:27 ] evaluating: loss: 2.3557, top1: 80.33%, best_acc: 86.07%,obj_loss: 0.2062,verb_loss:0.6785,l1_loss:0.0082,obj_acc:91.8033%, verb_acc:86.8852%
+[ 2025-04-22 13:27 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:30 ] training: epoch: 55, loss: 1.9440, top1: 87.32%, lr: 0.002500, obj_loss: 0.0755, verb_loss:0.6397,l1_loss:0.0090, obj_acc:96.6549%, verb_acc:87.8521%
+[ 2025-04-22 13:30 ] evaluating: loss: 2.2489, top1: 86.07%, best_acc: 86.07%,obj_loss: 0.1644,verb_loss:0.6775,l1_loss:0.0087,obj_acc:92.6230%, verb_acc:87.7049%
+[ 2025-04-22 13:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:33 ] training: epoch: 56, loss: 1.8207, top1: 88.03%, lr: 0.002500, obj_loss: 0.0492, verb_loss:0.6154,l1_loss:0.0091, obj_acc:98.7676%, verb_acc:88.0282%
+[ 2025-04-22 13:33 ] evaluating: loss: 2.2466, top1: 81.97%, best_acc: 86.07%,obj_loss: 0.1771,verb_loss:0.6459,l1_loss:0.0082,obj_acc:93.4426%, verb_acc:89.3443%
+[ 2025-04-22 13:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:35 ] training: epoch: 57, loss: 1.8165, top1: 89.61%, lr: 0.002500, obj_loss: 0.0573, verb_loss:0.6011,l1_loss:0.0092, obj_acc:97.8873%, verb_acc:89.7887%
+[ 2025-04-22 13:36 ] evaluating: loss: 2.3547, top1: 82.79%, best_acc: 86.07%,obj_loss: 0.2445,verb_loss:0.6077,l1_loss:0.0088,obj_acc:92.6230%, verb_acc:92.6230%
+[ 2025-04-22 13:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:38 ] training: epoch: 58, loss: 1.6793, top1: 89.79%, lr: 0.002500, obj_loss: 0.0407, verb_loss:0.5583,l1_loss:0.0093, obj_acc:98.9437%, verb_acc:91.0211%
+[ 2025-04-22 13:39 ] evaluating: loss: 1.9667, top1: 88.52%, best_acc: 88.52%,obj_loss: 0.0795,verb_loss:0.6158,l1_loss:0.0089,obj_acc:97.5410%, verb_acc:93.4426%
+[ 2025-04-22 13:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:41 ] training: epoch: 59, loss: 1.6583, top1: 92.78%, lr: 0.002500, obj_loss: 0.0357, verb_loss:0.5658,l1_loss:0.0092, obj_acc:99.1197%, verb_acc:91.5493%
+[ 2025-04-22 13:42 ] evaluating: loss: 2.0751, top1: 82.79%, best_acc: 88.52%,obj_loss: 0.1004,verb_loss:0.6212,l1_loss:0.0082,obj_acc:95.9016%, verb_acc:89.3443%
+[ 2025-04-22 13:42 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:44 ] training: epoch: 60, loss: 1.7358, top1: 90.85%, lr: 0.002500, obj_loss: 0.0482, verb_loss:0.5828,l1_loss:0.0090, obj_acc:98.4155%, verb_acc:89.4366%
+[ 2025-04-22 13:45 ] evaluating: loss: 2.2077, top1: 83.61%, best_acc: 88.52%,obj_loss: 0.1504,verb_loss:0.6479,l1_loss:0.0086,obj_acc:94.2623%, verb_acc:86.8852%
+[ 2025-04-22 13:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:47 ] training: epoch: 61, loss: 1.6640, top1: 91.55%, lr: 0.001250, obj_loss: 0.0316, verb_loss:0.5638,l1_loss:0.0090, obj_acc:99.1197%, verb_acc:91.3732%
+[ 2025-04-22 13:48 ] evaluating: loss: 2.0255, top1: 86.89%, best_acc: 88.52%,obj_loss: 0.0967,verb_loss:0.6159,l1_loss:0.0089,obj_acc:96.7213%, verb_acc:92.6230%
+[ 2025-04-22 13:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:50 ] training: epoch: 62, loss: 1.5640, top1: 93.13%, lr: 0.001250, obj_loss: 0.0266, verb_loss:0.5320,l1_loss:0.0089, obj_acc:99.4718%, verb_acc:91.9014%
+[ 2025-04-22 13:51 ] evaluating: loss: 2.0711, top1: 88.52%, best_acc: 88.52%,obj_loss: 0.1127,verb_loss:0.6440,l1_loss:0.0083,obj_acc:95.0820%, verb_acc:91.8033%
+[ 2025-04-22 13:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:54 ] training: epoch: 63, loss: 1.5720, top1: 93.13%, lr: 0.001250, obj_loss: 0.0421, verb_loss:0.5223,l1_loss:0.0089, obj_acc:99.2958%, verb_acc:93.8380%
+[ 2025-04-22 13:54 ] evaluating: loss: 2.1701, top1: 85.25%, best_acc: 88.52%,obj_loss: 0.2056,verb_loss:0.5875,l1_loss:0.0080,obj_acc:93.4426%, verb_acc:94.2623%
+[ 2025-04-22 13:54 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:56 ] training: epoch: 64, loss: 1.5755, top1: 92.43%, lr: 0.001250, obj_loss: 0.0357, verb_loss:0.5306,l1_loss:0.0088, obj_acc:98.9437%, verb_acc:92.6056%
+[ 2025-04-22 13:57 ] evaluating: loss: 2.0726, top1: 86.07%, best_acc: 88.52%,obj_loss: 0.1219,verb_loss:0.6205,l1_loss:0.0078,obj_acc:95.9016%, verb_acc:88.5246%
+[ 2025-04-22 13:57 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 13:59 ] training: epoch: 65, loss: 1.5404, top1: 93.49%, lr: 0.001250, obj_loss: 0.0185, verb_loss:0.5287,l1_loss:0.0087, obj_acc:99.8239%, verb_acc:92.0775%
+[ 2025-04-22 14:00 ] evaluating: loss: 1.9735, top1: 81.97%, best_acc: 88.52%,obj_loss: 0.0939,verb_loss:0.5829,l1_loss:0.0078,obj_acc:95.9016%, verb_acc:90.9836%
+[ 2025-04-22 14:00 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:02 ] training: epoch: 66, loss: 1.5247, top1: 93.31%, lr: 0.001250, obj_loss: 0.0331, verb_loss:0.5046,l1_loss:0.0086, obj_acc:99.1197%, verb_acc:93.1338%
+[ 2025-04-22 14:03 ] evaluating: loss: 2.1335, top1: 83.61%, best_acc: 88.52%,obj_loss: 0.1364,verb_loss:0.6339,l1_loss:0.0075,obj_acc:93.4426%, verb_acc:89.3443%
+[ 2025-04-22 14:03 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:05 ] training: epoch: 67, loss: 1.5790, top1: 92.25%, lr: 0.001250, obj_loss: 0.0227, verb_loss:0.5363,l1_loss:0.0085, obj_acc:99.6479%, verb_acc:92.7817%
+[ 2025-04-22 14:06 ] evaluating: loss: 2.0930, top1: 84.43%, best_acc: 88.52%,obj_loss: 0.1287,verb_loss:0.6318,l1_loss:0.0077,obj_acc:95.0820%, verb_acc:89.3443%
+[ 2025-04-22 14:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:08 ] training: epoch: 68, loss: 1.4583, top1: 94.72%, lr: 0.001250, obj_loss: 0.0204, verb_loss:0.4942,l1_loss:0.0086, obj_acc:99.4718%, verb_acc:93.6620%
+[ 2025-04-22 14:09 ] evaluating: loss: 2.0123, top1: 84.43%, best_acc: 88.52%,obj_loss: 0.0795,verb_loss:0.6339,l1_loss:0.0079,obj_acc:96.7213%, verb_acc:89.3443%
+[ 2025-04-22 14:09 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:11 ] training: epoch: 69, loss: 1.5428, top1: 93.13%, lr: 0.001250, obj_loss: 0.0276, verb_loss:0.5255,l1_loss:0.0086, obj_acc:99.2958%, verb_acc:92.2535%
+[ 2025-04-22 14:12 ] evaluating: loss: 2.2403, top1: 85.25%, best_acc: 88.52%,obj_loss: 0.2078,verb_loss:0.6392,l1_loss:0.0075,obj_acc:95.0820%, verb_acc:89.3443%
+[ 2025-04-22 14:12 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:14 ] training: epoch: 70, loss: 1.5318, top1: 92.61%, lr: 0.001250, obj_loss: 0.0240, verb_loss:0.5186,l1_loss:0.0086, obj_acc:99.4718%, verb_acc:93.3099%
+[ 2025-04-22 14:15 ] evaluating: loss: 1.9891, top1: 87.70%, best_acc: 88.52%,obj_loss: 0.1276,verb_loss:0.5986,l1_loss:0.0076,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 14:15 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:17 ] training: epoch: 71, loss: 1.5052, top1: 93.49%, lr: 0.001250, obj_loss: 0.0377, verb_loss:0.5022,l1_loss:0.0085, obj_acc:99.1197%, verb_acc:93.6620%
+[ 2025-04-22 14:18 ] evaluating: loss: 2.0197, top1: 86.07%, best_acc: 88.52%,obj_loss: 0.1337,verb_loss:0.5979,l1_loss:0.0075,obj_acc:95.9016%, verb_acc:90.1639%
+[ 2025-04-22 14:18 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:20 ] training: epoch: 72, loss: 1.5288, top1: 92.96%, lr: 0.001250, obj_loss: 0.0202, verb_loss:0.5289,l1_loss:0.0084, obj_acc:99.8239%, verb_acc:92.7817%
+[ 2025-04-22 14:21 ] evaluating: loss: 1.9731, top1: 88.52%, best_acc: 88.52%,obj_loss: 0.1200,verb_loss:0.6062,l1_loss:0.0072,obj_acc:96.7213%, verb_acc:91.8033%
+[ 2025-04-22 14:21 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:24 ] training: epoch: 73, loss: 1.5198, top1: 93.31%, lr: 0.001250, obj_loss: 0.0259, verb_loss:0.5190,l1_loss:0.0084, obj_acc:99.4718%, verb_acc:92.6056%
+[ 2025-04-22 14:24 ] evaluating: loss: 2.3171, top1: 86.07%, best_acc: 88.52%,obj_loss: 0.2225,verb_loss:0.6693,l1_loss:0.0076,obj_acc:95.0820%, verb_acc:86.8852%
+[ 2025-04-22 14:24 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:27 ] training: epoch: 74, loss: 1.4897, top1: 92.96%, lr: 0.001250, obj_loss: 0.0268, verb_loss:0.5086,l1_loss:0.0085, obj_acc:99.2958%, verb_acc:93.3099%
+[ 2025-04-22 14:27 ] evaluating: loss: 1.9156, top1: 89.34%, best_acc: 89.34%,obj_loss: 0.1211,verb_loss:0.5856,l1_loss:0.0078,obj_acc:97.5410%, verb_acc:90.9836%
+[ 2025-04-22 14:27 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:30 ] training: epoch: 75, loss: 1.4653, top1: 94.01%, lr: 0.001250, obj_loss: 0.0121, verb_loss:0.5081,l1_loss:0.0085, obj_acc:100.0000%, verb_acc:93.1338%
+[ 2025-04-22 14:30 ] evaluating: loss: 2.1245, top1: 85.25%, best_acc: 89.34%,obj_loss: 0.1928,verb_loss:0.6087,l1_loss:0.0076,obj_acc:95.0820%, verb_acc:88.5246%
+[ 2025-04-22 14:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:33 ] training: epoch: 76, loss: 1.4741, top1: 94.01%, lr: 0.001250, obj_loss: 0.0349, verb_loss:0.4876,l1_loss:0.0083, obj_acc:98.7676%, verb_acc:94.7183%
+[ 2025-04-22 14:33 ] evaluating: loss: 1.9504, top1: 84.43%, best_acc: 89.34%,obj_loss: 0.1111,verb_loss:0.5997,l1_loss:0.0073,obj_acc:95.0820%, verb_acc:88.5246%
+[ 2025-04-22 14:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:36 ] training: epoch: 77, loss: 1.4627, top1: 94.19%, lr: 0.001250, obj_loss: 0.0231, verb_loss:0.4996,l1_loss:0.0084, obj_acc:98.9437%, verb_acc:93.4859%
+[ 2025-04-22 14:36 ] evaluating: loss: 2.1894, top1: 81.97%, best_acc: 89.34%,obj_loss: 0.1742,verb_loss:0.6319,l1_loss:0.0075,obj_acc:95.0820%, verb_acc:88.5246%
+[ 2025-04-22 14:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:38 ] training: epoch: 78, loss: 1.4615, top1: 94.19%, lr: 0.001250, obj_loss: 0.0199, verb_loss:0.5040,l1_loss:0.0084, obj_acc:99.2958%, verb_acc:93.4859%
+[ 2025-04-22 14:39 ] evaluating: loss: 2.1993, top1: 84.43%, best_acc: 89.34%,obj_loss: 0.2282,verb_loss:0.6095,l1_loss:0.0074,obj_acc:91.8033%, verb_acc:90.1639%
+[ 2025-04-22 14:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:41 ] training: epoch: 79, loss: 1.4176, top1: 94.01%, lr: 0.001250, obj_loss: 0.0137, verb_loss:0.4824,l1_loss:0.0085, obj_acc:99.8239%, verb_acc:93.8380%
+[ 2025-04-22 14:42 ] evaluating: loss: 2.1778, top1: 84.43%, best_acc: 89.34%,obj_loss: 0.1892,verb_loss:0.6166,l1_loss:0.0078,obj_acc:94.2623%, verb_acc:87.7049%
+[ 2025-04-22 14:42 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:44 ] training: epoch: 80, loss: 1.3841, top1: 96.13%, lr: 0.001250, obj_loss: 0.0137, verb_loss:0.4751,l1_loss:0.0085, obj_acc:99.8239%, verb_acc:94.8944%
+[ 2025-04-22 14:45 ] evaluating: loss: 2.0373, top1: 86.07%, best_acc: 89.34%,obj_loss: 0.1311,verb_loss:0.6119,l1_loss:0.0076,obj_acc:96.7213%, verb_acc:89.3443%
+[ 2025-04-22 14:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:47 ] training: epoch: 81, loss: 1.3787, top1: 94.54%, lr: 0.000625, obj_loss: 0.0231, verb_loss:0.4606,l1_loss:0.0085, obj_acc:99.4718%, verb_acc:95.2465%
+[ 2025-04-22 14:48 ] evaluating: loss: 1.9942, top1: 87.70%, best_acc: 89.34%,obj_loss: 0.1188,verb_loss:0.6146,l1_loss:0.0077,obj_acc:96.7213%, verb_acc:89.3443%
+[ 2025-04-22 14:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:50 ] training: epoch: 82, loss: 1.3681, top1: 93.49%, lr: 0.000625, obj_loss: 0.0179, verb_loss:0.4608,l1_loss:0.0084, obj_acc:99.8239%, verb_acc:93.8380%
+[ 2025-04-22 14:51 ] evaluating: loss: 1.9621, top1: 90.98%, best_acc: 90.98%,obj_loss: 0.1454,verb_loss:0.5962,l1_loss:0.0073,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 14:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:53 ] training: epoch: 83, loss: 1.3537, top1: 95.07%, lr: 0.000625, obj_loss: 0.0152, verb_loss:0.4623,l1_loss:0.0083, obj_acc:99.8239%, verb_acc:93.6620%
+[ 2025-04-22 14:54 ] evaluating: loss: 2.0707, top1: 86.07%, best_acc: 90.98%,obj_loss: 0.1551,verb_loss:0.6221,l1_loss:0.0076,obj_acc:95.9016%, verb_acc:88.5246%
+[ 2025-04-22 14:54 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:56 ] training: epoch: 84, loss: 1.3689, top1: 95.42%, lr: 0.000625, obj_loss: 0.0131, verb_loss:0.4705,l1_loss:0.0083, obj_acc:99.6479%, verb_acc:94.7183%
+[ 2025-04-22 14:57 ] evaluating: loss: 2.0089, top1: 90.16%, best_acc: 90.98%,obj_loss: 0.1544,verb_loss:0.5954,l1_loss:0.0075,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 14:57 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 14:59 ] training: epoch: 85, loss: 1.3299, top1: 95.42%, lr: 0.000625, obj_loss: 0.0122, verb_loss:0.4507,l1_loss:0.0082, obj_acc:99.8239%, verb_acc:95.5986%
+[ 2025-04-22 15:00 ] evaluating: loss: 1.9572, top1: 89.34%, best_acc: 90.98%,obj_loss: 0.1383,verb_loss:0.5880,l1_loss:0.0075,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 15:00 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:02 ] training: epoch: 86, loss: 1.4103, top1: 94.01%, lr: 0.000625, obj_loss: 0.0164, verb_loss:0.4822,l1_loss:0.0083, obj_acc:99.6479%, verb_acc:94.1901%
+[ 2025-04-22 15:03 ] evaluating: loss: 1.8789, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1177,verb_loss:0.5775,l1_loss:0.0074,obj_acc:95.9016%, verb_acc:90.9836%
+[ 2025-04-22 15:03 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:05 ] training: epoch: 87, loss: 1.3499, top1: 94.72%, lr: 0.000625, obj_loss: 0.0099, verb_loss:0.4609,l1_loss:0.0083, obj_acc:99.8239%, verb_acc:95.4225%
+[ 2025-04-22 15:06 ] evaluating: loss: 1.9504, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1279,verb_loss:0.5901,l1_loss:0.0073,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 15:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:08 ] training: epoch: 88, loss: 1.3361, top1: 95.95%, lr: 0.000625, obj_loss: 0.0099, verb_loss:0.4603,l1_loss:0.0082, obj_acc:100.0000%, verb_acc:95.7746%
+[ 2025-04-22 15:09 ] evaluating: loss: 1.9726, top1: 86.89%, best_acc: 90.98%,obj_loss: 0.1217,verb_loss:0.6147,l1_loss:0.0074,obj_acc:95.9016%, verb_acc:88.5246%
+[ 2025-04-22 15:09 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:11 ] training: epoch: 89, loss: 1.3279, top1: 95.60%, lr: 0.000625, obj_loss: 0.0078, verb_loss:0.4588,l1_loss:0.0081, obj_acc:100.0000%, verb_acc:94.7183%
+[ 2025-04-22 15:12 ] evaluating: loss: 2.0084, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1403,verb_loss:0.6188,l1_loss:0.0071,obj_acc:95.9016%, verb_acc:90.1639%
+[ 2025-04-22 15:12 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:14 ] training: epoch: 90, loss: 1.3157, top1: 95.77%, lr: 0.000625, obj_loss: 0.0109, verb_loss:0.4504,l1_loss:0.0081, obj_acc:99.8239%, verb_acc:95.2465%
+[ 2025-04-22 15:15 ] evaluating: loss: 1.8755, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.0925,verb_loss:0.5975,l1_loss:0.0073,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 15:15 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:17 ] training: epoch: 91, loss: 1.3492, top1: 94.89%, lr: 0.000625, obj_loss: 0.0205, verb_loss:0.4548,l1_loss:0.0082, obj_acc:99.4718%, verb_acc:95.7746%
+[ 2025-04-22 15:18 ] evaluating: loss: 1.8922, top1: 90.16%, best_acc: 90.98%,obj_loss: 0.0903,verb_loss:0.6098,l1_loss:0.0073,obj_acc:97.5410%, verb_acc:90.9836%
+[ 2025-04-22 15:18 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:20 ] training: epoch: 92, loss: 1.3317, top1: 95.60%, lr: 0.000625, obj_loss: 0.0131, verb_loss:0.4585,l1_loss:0.0082, obj_acc:99.8239%, verb_acc:94.7183%
+[ 2025-04-22 15:21 ] evaluating: loss: 1.9572, top1: 89.34%, best_acc: 90.98%,obj_loss: 0.1203,verb_loss:0.6096,l1_loss:0.0074,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 15:21 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:23 ] training: epoch: 93, loss: 1.2948, top1: 95.77%, lr: 0.000625, obj_loss: 0.0104, verb_loss:0.4394,l1_loss:0.0082, obj_acc:100.0000%, verb_acc:94.8944%
+[ 2025-04-22 15:24 ] evaluating: loss: 2.0139, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1592,verb_loss:0.5957,l1_loss:0.0074,obj_acc:95.9016%, verb_acc:90.1639%
+[ 2025-04-22 15:24 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:26 ] training: epoch: 94, loss: 1.3372, top1: 95.77%, lr: 0.000625, obj_loss: 0.0087, verb_loss:0.4601,l1_loss:0.0083, obj_acc:99.8239%, verb_acc:95.0704%
+[ 2025-04-22 15:27 ] evaluating: loss: 1.9945, top1: 86.07%, best_acc: 90.98%,obj_loss: 0.1542,verb_loss:0.5850,l1_loss:0.0075,obj_acc:96.7213%, verb_acc:92.6230%
+[ 2025-04-22 15:27 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:29 ] training: epoch: 95, loss: 1.2919, top1: 96.48%, lr: 0.000625, obj_loss: 0.0079, verb_loss:0.4418,l1_loss:0.0083, obj_acc:100.0000%, verb_acc:96.6549%
+[ 2025-04-22 15:30 ] evaluating: loss: 1.9126, top1: 89.34%, best_acc: 90.98%,obj_loss: 0.1321,verb_loss:0.5777,l1_loss:0.0074,obj_acc:95.9016%, verb_acc:90.1639%
+[ 2025-04-22 15:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:32 ] training: epoch: 96, loss: 1.2418, top1: 96.83%, lr: 0.000625, obj_loss: 0.0115, verb_loss:0.4209,l1_loss:0.0082, obj_acc:99.8239%, verb_acc:96.6549%
+[ 2025-04-22 15:33 ] evaluating: loss: 1.9965, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1361,verb_loss:0.6027,l1_loss:0.0073,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 15:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:35 ] training: epoch: 97, loss: 1.2646, top1: 96.83%, lr: 0.000625, obj_loss: 0.0104, verb_loss:0.4309,l1_loss:0.0081, obj_acc:99.8239%, verb_acc:96.3028%
+[ 2025-04-22 15:35 ] evaluating: loss: 1.9547, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1300,verb_loss:0.6025,l1_loss:0.0073,obj_acc:97.5410%, verb_acc:90.9836%
+[ 2025-04-22 15:35 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:38 ] training: epoch: 98, loss: 1.3066, top1: 95.42%, lr: 0.000625, obj_loss: 0.0080, verb_loss:0.4466,l1_loss:0.0081, obj_acc:100.0000%, verb_acc:95.0704%
+[ 2025-04-22 15:38 ] evaluating: loss: 1.9001, top1: 86.89%, best_acc: 90.98%,obj_loss: 0.1342,verb_loss:0.5745,l1_loss:0.0071,obj_acc:95.9016%, verb_acc:90.9836%
+[ 2025-04-22 15:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:41 ] training: epoch: 99, loss: 1.2749, top1: 96.30%, lr: 0.000625, obj_loss: 0.0064, verb_loss:0.4386,l1_loss:0.0080, obj_acc:100.0000%, verb_acc:95.4225%
+[ 2025-04-22 15:41 ] evaluating: loss: 1.9273, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1314,verb_loss:0.5930,l1_loss:0.0072,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 15:41 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:44 ] training: epoch: 100, loss: 1.2736, top1: 96.65%, lr: 0.000625, obj_loss: 0.0073, verb_loss:0.4388,l1_loss:0.0080, obj_acc:100.0000%, verb_acc:96.4789%
+[ 2025-04-22 15:44 ] evaluating: loss: 1.9243, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1254,verb_loss:0.6037,l1_loss:0.0071,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 15:44 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:47 ] training: epoch: 101, loss: 1.3287, top1: 95.42%, lr: 0.000313, obj_loss: 0.0057, verb_loss:0.4634,l1_loss:0.0080, obj_acc:100.0000%, verb_acc:95.2465%
+[ 2025-04-22 15:47 ] evaluating: loss: 1.9119, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1160,verb_loss:0.6013,l1_loss:0.0071,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 15:47 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:50 ] training: epoch: 102, loss: 1.2875, top1: 96.30%, lr: 0.000313, obj_loss: 0.0165, verb_loss:0.4334,l1_loss:0.0080, obj_acc:99.6479%, verb_acc:96.1268%
+[ 2025-04-22 15:50 ] evaluating: loss: 1.8914, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1196,verb_loss:0.5850,l1_loss:0.0070,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:53 ] training: epoch: 103, loss: 1.2662, top1: 96.13%, lr: 0.000313, obj_loss: 0.0056, verb_loss:0.4379,l1_loss:0.0080, obj_acc:100.0000%, verb_acc:95.9507%
+[ 2025-04-22 15:53 ] evaluating: loss: 1.9238, top1: 86.89%, best_acc: 90.98%,obj_loss: 0.1242,verb_loss:0.5974,l1_loss:0.0071,obj_acc:95.9016%, verb_acc:90.1639%
+[ 2025-04-22 15:53 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:56 ] training: epoch: 104, loss: 1.3347, top1: 95.60%, lr: 0.000313, obj_loss: 0.0170, verb_loss:0.4606,l1_loss:0.0079, obj_acc:99.8239%, verb_acc:95.2465%
+[ 2025-04-22 15:56 ] evaluating: loss: 1.9661, top1: 86.89%, best_acc: 90.98%,obj_loss: 0.1282,verb_loss:0.6192,l1_loss:0.0069,obj_acc:96.7213%, verb_acc:89.3443%
+[ 2025-04-22 15:56 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 15:59 ] training: epoch: 105, loss: 1.2830, top1: 95.07%, lr: 0.000313, obj_loss: 0.0090, verb_loss:0.4406,l1_loss:0.0080, obj_acc:100.0000%, verb_acc:95.5986%
+[ 2025-04-22 15:59 ] evaluating: loss: 1.9620, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1386,verb_loss:0.6010,l1_loss:0.0070,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 15:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:02 ] training: epoch: 106, loss: 1.2653, top1: 96.30%, lr: 0.000313, obj_loss: 0.0079, verb_loss:0.4322,l1_loss:0.0080, obj_acc:100.0000%, verb_acc:95.7746%
+[ 2025-04-22 16:02 ] evaluating: loss: 1.8577, top1: 89.34%, best_acc: 90.98%,obj_loss: 0.1122,verb_loss:0.5841,l1_loss:0.0071,obj_acc:97.5410%, verb_acc:90.1639%
+[ 2025-04-22 16:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:05 ] training: epoch: 107, loss: 1.2870, top1: 96.30%, lr: 0.000313, obj_loss: 0.0155, verb_loss:0.4351,l1_loss:0.0080, obj_acc:99.8239%, verb_acc:95.7746%
+[ 2025-04-22 16:05 ] evaluating: loss: 1.9096, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1217,verb_loss:0.5933,l1_loss:0.0071,obj_acc:97.5410%, verb_acc:90.9836%
+[ 2025-04-22 16:05 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:08 ] training: epoch: 108, loss: 1.3088, top1: 95.60%, lr: 0.000313, obj_loss: 0.0160, verb_loss:0.4479,l1_loss:0.0079, obj_acc:99.6479%, verb_acc:94.8944%
+[ 2025-04-22 16:08 ] evaluating: loss: 1.9391, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1313,verb_loss:0.6045,l1_loss:0.0069,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 16:08 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:11 ] training: epoch: 109, loss: 1.2727, top1: 96.30%, lr: 0.000313, obj_loss: 0.0135, verb_loss:0.4327,l1_loss:0.0079, obj_acc:99.6479%, verb_acc:95.7746%
+[ 2025-04-22 16:11 ] evaluating: loss: 1.9211, top1: 89.34%, best_acc: 90.98%,obj_loss: 0.1227,verb_loss:0.6070,l1_loss:0.0069,obj_acc:96.7213%, verb_acc:90.1639%
+[ 2025-04-22 16:11 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:14 ] training: epoch: 110, loss: 1.2808, top1: 95.42%, lr: 0.000313, obj_loss: 0.0137, verb_loss:0.4346,l1_loss:0.0079, obj_acc:99.6479%, verb_acc:95.0704%
+[ 2025-04-22 16:14 ] evaluating: loss: 1.9537, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1298,verb_loss:0.6064,l1_loss:0.0070,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 16:14 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:17 ] training: epoch: 111, loss: 1.3027, top1: 95.42%, lr: 0.000313, obj_loss: 0.0208, verb_loss:0.4380,l1_loss:0.0079, obj_acc:99.4718%, verb_acc:95.4225%
+[ 2025-04-22 16:17 ] evaluating: loss: 2.0086, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1461,verb_loss:0.6280,l1_loss:0.0070,obj_acc:95.9016%, verb_acc:89.3443%
+[ 2025-04-22 16:17 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:20 ] training: epoch: 112, loss: 1.2530, top1: 96.13%, lr: 0.000313, obj_loss: 0.0064, verb_loss:0.4308,l1_loss:0.0079, obj_acc:100.0000%, verb_acc:95.7746%
+[ 2025-04-22 16:20 ] evaluating: loss: 1.9060, top1: 88.52%, best_acc: 90.98%,obj_loss: 0.1250,verb_loss:0.5923,l1_loss:0.0071,obj_acc:96.7213%, verb_acc:91.8033%
+[ 2025-04-22 16:20 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:23 ] training: epoch: 113, loss: 1.2788, top1: 95.77%, lr: 0.000313, obj_loss: 0.0145, verb_loss:0.4364,l1_loss:0.0078, obj_acc:99.6479%, verb_acc:95.2465%
+[ 2025-04-22 16:23 ] evaluating: loss: 2.0565, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1659,verb_loss:0.6282,l1_loss:0.0068,obj_acc:95.9016%, verb_acc:90.1639%
+[ 2025-04-22 16:23 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:25 ] training: epoch: 114, loss: 1.2430, top1: 97.01%, lr: 0.000313, obj_loss: 0.0180, verb_loss:0.4161,l1_loss:0.0078, obj_acc:99.8239%, verb_acc:96.1268%
+[ 2025-04-22 16:26 ] evaluating: loss: 1.9717, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1342,verb_loss:0.6193,l1_loss:0.0069,obj_acc:95.0820%, verb_acc:89.3443%
+[ 2025-04-22 16:26 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:28 ] training: epoch: 115, loss: 1.2224, top1: 97.36%, lr: 0.000313, obj_loss: 0.0106, verb_loss:0.4156,l1_loss:0.0079, obj_acc:99.4718%, verb_acc:96.6549%
+[ 2025-04-22 16:29 ] evaluating: loss: 2.0575, top1: 85.25%, best_acc: 90.98%,obj_loss: 0.1792,verb_loss:0.6097,l1_loss:0.0069,obj_acc:95.9016%, verb_acc:90.9836%
+[ 2025-04-22 16:29 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:31 ] training: epoch: 116, loss: 1.2879, top1: 95.42%, lr: 0.000313, obj_loss: 0.0153, verb_loss:0.4385,l1_loss:0.0078, obj_acc:99.4718%, verb_acc:95.5986%
+[ 2025-04-22 16:32 ] evaluating: loss: 1.9533, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1321,verb_loss:0.6070,l1_loss:0.0069,obj_acc:96.7213%, verb_acc:90.9836%
+[ 2025-04-22 16:32 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:34 ] training: epoch: 117, loss: 1.2745, top1: 96.13%, lr: 0.000313, obj_loss: 0.0123, verb_loss:0.4374,l1_loss:0.0078, obj_acc:99.6479%, verb_acc:95.2465%
+[ 2025-04-22 16:35 ] evaluating: loss: 2.0418, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1607,verb_loss:0.6256,l1_loss:0.0068,obj_acc:95.9016%, verb_acc:89.3443%
+[ 2025-04-22 16:35 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:37 ] training: epoch: 118, loss: 1.2381, top1: 96.13%, lr: 0.000313, obj_loss: 0.0050, verb_loss:0.4265,l1_loss:0.0078, obj_acc:100.0000%, verb_acc:96.1268%
+[ 2025-04-22 16:38 ] evaluating: loss: 2.0192, top1: 86.89%, best_acc: 90.98%,obj_loss: 0.1694,verb_loss:0.6086,l1_loss:0.0068,obj_acc:95.9016%, verb_acc:90.9836%
+[ 2025-04-22 16:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:40 ] training: epoch: 119, loss: 1.2922, top1: 96.13%, lr: 0.000313, obj_loss: 0.0079, verb_loss:0.4443,l1_loss:0.0078, obj_acc:99.8239%, verb_acc:95.7746%
+[ 2025-04-22 16:41 ] evaluating: loss: 2.0335, top1: 86.07%, best_acc: 90.98%,obj_loss: 0.1763,verb_loss:0.6046,l1_loss:0.0069,obj_acc:95.9016%, verb_acc:90.9836%
+[ 2025-04-22 16:41 ] adjust learning rate, using warm up, epoch: 5
+[ 2025-04-22 16:43 ] training: epoch: 120, loss: 1.2623, top1: 95.42%, lr: 0.000313, obj_loss: 0.0048, verb_loss:0.4373,l1_loss:0.0078, obj_acc:100.0000%, verb_acc:95.0704%
+[ 2025-04-22 16:44 ] evaluating: loss: 2.0236, top1: 87.70%, best_acc: 90.98%,obj_loss: 0.1636,verb_loss:0.6076,l1_loss:0.0069,obj_acc:95.0820%, verb_acc:89.3443%
+[ 2025-04-22 16:44 ] Done.
+
+[ 2025-04-22 18:24 ] Load weights from ./exp/h2o/h2o.pt
+[ 2025-04-22 18:24 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 18:24 ] Data load finished
+[ 2025-04-22 18:30 ] Load weights from D:/Downloads/amadw/h2o.pt
+[ 2025-04-22 18:31 ] Load weights from D:/Downloads/adamw/h2o.pt
+[ 2025-04-22 18:31 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 18:31 ] Data load finished
+[ 2025-04-22 18:53 ] Load weights from D:/Downloads/adamw/h2o.pt
+[ 2025-04-22 18:53 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 18:53 ] Data load finished
+[ 2025-04-22 19:01 ] Load weights from D:/Downloads/adamw/h2o.pt
+[ 2025-04-22 19:01 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 19:01 ] Data load finished
+[ 2025-04-22 21:44 ] Load weights from D:/Downloads/adamw/h2o (1).pt
+[ 2025-04-22 21:44 ] Model load finished: model.ISTANet.Model
+[ 2025-04-22 21:44 ] Data load finished
+[ 2025-04-23 19:17 ] Load weights from D:/Downloads/4heads/h2o.pt
+[ 2025-04-23 19:17 ] Model load finished: model.ISTANet.Model
+[ 2025-04-23 19:17 ] Data load finished
+[ 2025-04-25 10:42 ] Load weights from D:/Downloads/adamw-besttestacc/h2o (1).pt
+[ 2025-04-25 10:42 ] Model load finished: model.ISTANet.Model
+[ 2025-04-25 10:42 ] Data load finished
+[ 2025-04-25 10:44 ] Load weights from D:/Downloads/adamw-besttestacc/h2o (1).pt
+[ 2025-04-25 10:44 ] Model load finished: model.ISTANet.Model
+[ 2025-04-25 10:44 ] Data load finished
+[ 2025-04-25 10:46 ] Load weights from D:/Downloads/adamw-besttestacc/h2o (1).pt
+[ 2025-04-25 10:46 ] Model load finished: model.ISTANet.Model
+[ 2025-04-25 10:46 ] Data load finished
+[ 2025-04-25 10:50 ] Load weights from D:/Downloads/adamw-besttestacc/h2o (1).pt
+[ 2025-04-25 10:50 ] Model load finished: model.ISTANet.Model
+[ 2025-04-25 10:50 ] Data load finished
+[ 2025-04-26 10:44 ] Load weights from D:/Downloads/sgd-4heads-2enclayers/h2o (1).pt
+[ 2025-04-26 10:44 ] Model load finished: model.ISTANet.Model
+[ 2025-04-26 10:44 ] Data load finished
+[ 2025-04-26 10:46 ] Load weights from D:/Downloads/sgd-4heads-2enclayers/h2o (1).pt
+[ 2025-04-26 10:46 ] Model load finished: model.ISTANet.Model
+[ 2025-04-26 10:46 ] Data load finished
+[ 2025-04-26 15:01 ] Load weights from D:/Downloads/h2o (1).pt
+[ 2025-04-26 15:01 ] Model load finished: model.ISTANet.Model
+[ 2025-04-26 15:01 ] Data load finished
+[ 2025-04-26 15:07 ] Load weights from D:/Downloads/sgd-4heads-2enclayers/h2o (1).pt
+[ 2025-04-26 15:07 ] Model load finished: model.ISTANet.Model
+[ 2025-04-26 15:07 ] Data load finished
+[ 2025-04-30 10:41 ] Load weights from D:/Downloads/h2o (2).pt
+[ 2025-04-30 10:41 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 10:41 ] Data load finished
+[ 2025-04-30 11:01 ] Load weights from D:/Downloads/adamw-besttestacc/h2o (1).pt
+[ 2025-04-30 11:01 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 11:01 ] Data load finished
+[ 2025-04-30 11:03 ] Load weights from D:/Downloads/adamw-besttestacc/h2o (1).pt
+[ 2025-04-30 11:03 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 11:03 ] Data load finished
+[ 2025-04-30 18:38 ] Load weights from D:/Downloads/h2o (3).pt
+[ 2025-04-30 18:38 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 18:38 ] Data load finished
+[ 2025-04-30 18:40 ] Load weights from D:/Downloads/h2o (3).pt
+[ 2025-04-30 18:40 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 18:40 ] Data load finished
+[ 2025-04-30 20:15 ] Load weights from D:/Downloads/h2o (4).pt
+[ 2025-04-30 20:15 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 20:16 ] Data load finished
+[ 2025-04-30 20:43 ] Load weights from D:/Downloads/h2o (5).pt
+[ 2025-04-30 20:43 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 20:43 ] Data load finished
+[ 2025-04-30 21:32 ] Load weights from D:/Downloads/h2o (6).pt
+[ 2025-04-30 21:32 ] Model load finished: model.ISTANet.Model
+[ 2025-04-30 21:32 ] Data load finished
+[ 2025-05-02 13:44 ] Load weights from D:/Downloads/h2o (7).pt
+[ 2025-05-02 13:44 ] Model load finished: model.ISTANet.Model
+[ 2025-05-02 13:44 ] Data load finished
